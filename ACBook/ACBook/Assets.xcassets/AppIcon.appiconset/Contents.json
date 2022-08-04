@@ -6,6 +6,7 @@
       "size" : "20x20"
     },
     {
+      "filename" : "rsz_1books.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -16,6 +17,7 @@
       "size" : "29x29"
     },
     {
+      "filename" : "rsz_2books.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
@@ -26,16 +28,19 @@
       "size" : "40x40"
     },
     {
+      "filename" : "rsz_books.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "rsz_books-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "Books.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"

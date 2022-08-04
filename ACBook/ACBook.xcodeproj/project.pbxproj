@@ -13,6 +13,13 @@
 		EDDB8421289BA272003675B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDB8420289BA272003675B0 /* Preview Assets.xcassets */; };
 		EDDB8423289BA272003675B0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8422289BA272003675B0 /* Persistence.swift */; };
 		EDDB8426289BA272003675B0 /* ACBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8424289BA272003675B0 /* ACBook.xcdatamodeld */; };
+		EDDB842F289BA2F3003675B0 /* NPCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB842E289BA2F3003675B0 /* NPCView.swift */; };
+		EDDB8431289BBDE1003675B0 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8430289BBDE1003675B0 /* CircleImage.swift */; };
+		EDDB8433289BBE23003675B0 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8432289BBE23003675B0 /* DataLoader.swift */; };
+		EDDB8435289BC37E003675B0 /* HInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8434289BC37E003675B0 /* HInfo.swift */; };
+		EDDB8438289BC9B7003675B0 /* Villager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8437289BC9B7003675B0 /* Villager.swift */; };
+		EDDB843C289BCD30003675B0 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB843B289BCD30003675B0 /* ModelData.swift */; };
+		EDDB843F289BCEBD003675B0 /* villagers.json in Resources */ = {isa = PBXBuildFile; fileRef = EDDB843E289BCEBD003675B0 /* villagers.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		EDDB8422289BA272003675B0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EDDB8425289BA272003675B0 /* ACBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ACBook.xcdatamodel; sourceTree = "<group>"; };
 		EDDB8427289BA272003675B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDDB842E289BA2F3003675B0 /* NPCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NPCView.swift; path = ../../../NPCView.swift; sourceTree = "<group>"; };
+		EDDB8430289BBDE1003675B0 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		EDDB8432289BBE23003675B0 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		EDDB8434289BC37E003675B0 /* HInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HInfo.swift; sourceTree = "<group>"; };
+		EDDB8437289BC9B7003675B0 /* Villager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Villager.swift; sourceTree = "<group>"; };
+		EDDB843B289BCD30003675B0 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		EDDB843E289BCEBD003675B0 /* villagers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = villagers.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,9 @@
 		EDDB8418289BA26F003675B0 /* ACBook */ = {
 			isa = PBXGroup;
 			children = (
+				EDDB843D289BCE73003675B0 /* Resources */,
+				EDDB8436289BC9A3003675B0 /* GameEnitity */,
+				EDDB842D289BA2D7003675B0 /* View */,
 				EDDB8419289BA26F003675B0 /* ACBookApp.swift */,
 				EDDB841B289BA26F003675B0 /* ContentView.swift */,
 				EDDB841D289BA272003675B0 /* Assets.xcassets */,
@@ -63,6 +80,8 @@
 				EDDB8427289BA272003675B0 /* Info.plist */,
 				EDDB8424289BA272003675B0 /* ACBook.xcdatamodeld */,
 				EDDB841F289BA272003675B0 /* Preview Content */,
+				EDDB8432289BBE23003675B0 /* DataLoader.swift */,
+				EDDB843B289BCD30003675B0 /* ModelData.swift */,
 			);
 			path = ACBook;
 			sourceTree = "<group>";
@@ -73,6 +92,32 @@
 				EDDB8420289BA272003675B0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDDB842D289BA2D7003675B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EDDB842E289BA2F3003675B0 /* NPCView.swift */,
+				EDDB8430289BBDE1003675B0 /* CircleImage.swift */,
+				EDDB8434289BC37E003675B0 /* HInfo.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDDB8436289BC9A3003675B0 /* GameEnitity */ = {
+			isa = PBXGroup;
+			children = (
+				EDDB8437289BC9B7003675B0 /* Villager.swift */,
+			);
+			path = GameEnitity;
+			sourceTree = "<group>";
+		};
+		EDDB843D289BCE73003675B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EDDB843E289BCEBD003675B0 /* villagers.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +179,7 @@
 			files = (
 				EDDB8421289BA272003675B0 /* Preview Assets.xcassets in Resources */,
 				EDDB841E289BA272003675B0 /* Assets.xcassets in Resources */,
+				EDDB843F289BCEBD003675B0 /* villagers.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,10 +190,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDB8438289BC9B7003675B0 /* Villager.swift in Sources */,
 				EDDB8423289BA272003675B0 /* Persistence.swift in Sources */,
+				EDDB842F289BA2F3003675B0 /* NPCView.swift in Sources */,
+				EDDB8435289BC37E003675B0 /* HInfo.swift in Sources */,
+				EDDB8433289BBE23003675B0 /* DataLoader.swift in Sources */,
 				EDDB841C289BA26F003675B0 /* ContentView.swift in Sources */,
 				EDDB8426289BA272003675B0 /* ACBook.xcdatamodeld in Sources */,
+				EDDB843C289BCD30003675B0 /* ModelData.swift in Sources */,
 				EDDB841A289BA26F003675B0 /* ACBookApp.swift in Sources */,
+				EDDB8431289BBDE1003675B0 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +332,7 @@
 				DEVELOPMENT_TEAM = RUY9U8HUR5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ACBook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +354,7 @@
 				DEVELOPMENT_TEAM = RUY9U8HUR5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ACBook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
