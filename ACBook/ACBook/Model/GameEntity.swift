@@ -7,5 +7,5 @@
 import Foundation
 
 enum GameEntity: String{
-    case villagers, insects, fishes, sea_creatures = "sea creatures", fossils, arts
+    case villagers, insects, fish, sea_creatures = "sea creatures", fossils, arts
 }

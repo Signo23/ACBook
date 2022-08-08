@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED04FFF728A16306003C9732 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04FFF628A16306003C9732 /* Creature.swift */; };
+		ED04FFF928A16649003C9732 /* creatures.json in Resources */ = {isa = PBXBuildFile; fileRef = ED04FFF828A16649003C9732 /* creatures.json */; };
 		EDBD7D5D289D67F40081F5C9 /* CollectionableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D5C289D67F40081F5C9 /* CollectionableMenuView.swift */; };
 		EDBD7D5F289D6A9B0081F5C9 /* MuseumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D5E289D6A9B0081F5C9 /* MuseumView.swift */; };
 		EDBD7D61289D6EFE0081F5C9 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D60289D6EFE0081F5C9 /* UserView.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED04FFF628A16306003C9732 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
+		ED04FFF828A16649003C9732 /* creatures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = creatures.json; sourceTree = "<group>"; };
 		EDBD7D5C289D67F40081F5C9 /* CollectionableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionableMenuView.swift; sourceTree = "<group>"; };
 		EDBD7D5E289D6A9B0081F5C9 /* MuseumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumView.swift; sourceTree = "<group>"; };
 		EDBD7D60289D6EFE0081F5C9 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -93,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				EDDB843D289BCE73003675B0 /* Resources */,
-				EDDB8436289BC9A3003675B0 /* GameEnitity */,
+				EDDB8436289BC9A3003675B0 /* Model */,
 				EDDB842D289BA2D7003675B0 /* View */,
 				EDDB8419289BA26F003675B0 /* ACBookApp.swift */,
 				EDDB841B289BA26F003675B0 /* ContentView.swift */,
@@ -135,19 +139,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		EDDB8436289BC9A3003675B0 /* GameEnitity */ = {
+		EDDB8436289BC9A3003675B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				EDDB8437289BC9B7003675B0 /* Villager.swift */,
 				EDBD7D68289E734A0081F5C9 /* GameEntity.swift */,
 				EDBD7D6A289E77F90081F5C9 /* Catalogable.swift */,
+				ED04FFF628A16306003C9732 /* Creature.swift */,
 			);
-			path = GameEnitity;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EDDB843D289BCE73003675B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ED04FFF828A16649003C9732 /* creatures.json */,
 				EDD161EC289C2608000C9798 /* villagers.json */,
 			);
 			path = Resources;
@@ -210,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED04FFF928A16649003C9732 /* creatures.json in Resources */,
 				EDDB8421289BA272003675B0 /* Preview Assets.xcassets in Resources */,
 				EDDB841E289BA272003675B0 /* Assets.xcassets in Resources */,
 				EDD161ED289C2608000C9798 /* villagers.json in Resources */,
@@ -243,6 +250,7 @@
 				EDBD7D61289D6EFE0081F5C9 /* UserView.swift in Sources */,
 				EDD161F1289C418D000C9798 /* CatalogueView.swift in Sources */,
 				EDBD7D5D289D67F40081F5C9 /* CollectionableMenuView.swift in Sources */,
+				ED04FFF728A16306003C9732 /* Creature.swift in Sources */,
 				EDDB8431289BBDE1003675B0 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

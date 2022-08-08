@@ -20,7 +20,7 @@ struct VillagerRowView: View {
                 .onAppear(){
                     viewModel.loadImage(url: item.getMainImageURL(), id: item.getID())
                 }
-            Text(item.getName())
+            Text(item.getName().capitalized)
         }
     }
 }

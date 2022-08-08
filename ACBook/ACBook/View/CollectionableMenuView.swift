@@ -13,13 +13,13 @@ struct CollectionableMenuView: View {
     
     var body: some View {
         Section(){
-            NavigationLink(destination: getDestination(.villagers)){
+            NavigationLink(destination: getDestination(.insects)){
                 Label("Insects", systemImage: "ant.fill")
             }
-            NavigationLink(destination: getDestination(.villagers)){
+            NavigationLink(destination: getDestination(.fish)){
                 Label("Fish", systemImage: "fish.fill")
             }
-            NavigationLink(destination: getDestination(.villagers)){
+            NavigationLink(destination: getDestination(.sea_creatures)){
                 Label("Sea creatures", systemImage: "tortoise.fill")
             }
         }

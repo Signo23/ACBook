@@ -10,6 +10,7 @@ import CoreData
 
 class DataLoader: ObservableObject {
     @Published var model = Modeldata<Villager>(fileName: "villagers.json")
+    @Published var modelCreatures = Modeldata<Creature>(fileName: "creatures.json")
     @Published var images: [Int:UIImage] = [:]
     @Published var imagesHouse: [Int:UIImage] = [:]
     var isLoading = true
@@ -19,7 +20,7 @@ class DataLoader: ObservableObject {
     private var villagers: [Villager] {
         model.list
     }
-    
+
     let notFoundImage = UIImage(named: "std")!
 
     
@@ -52,11 +53,17 @@ class DataLoader: ObservableObject {
         case.villagers:
             return villagers
         case .insects:
-            return villagers
-        case .fishes:
-            return villagers
+            return modelCreatures.list.filter { creature in
+                creature.getType() == GameEntity.insects
+            }
+        case .fish:
+            return modelCreatures.list.filter { creature in
+                creature.getType() == GameEntity.fish
+            }
         case .sea_creatures:
-            return villagers
+            return modelCreatures.list.filter { creature in
+                creature.getType() == GameEntity.sea_creatures
+            }
         case .fossils:
             return villagers
         case .arts:
