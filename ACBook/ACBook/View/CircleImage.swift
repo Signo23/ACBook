@@ -11,11 +11,11 @@ import SwiftUI
 
 struct CircleImage : View {
     @ObservedObject var viewModel: DataLoader
-    var image: URL
+    var item: Catalogable
     
     var body: some View {
         ZStack {
-            Image(uiImage: viewModel.images[1] ?? viewModel.notFoundImage!)
+            Image(uiImage: viewModel.images[item.getID()] ?? viewModel.notFoundImage!)
                 .resizable()
                 .frame(width: 150, height: 150, alignment: .center)
                 .clipShape(Circle())
@@ -23,7 +23,7 @@ struct CircleImage : View {
                 .shadow(radius: 7)
                 .onAppear {
                     //viewModel.loadImage(url: image)
-                    viewModel.loadImage(url: image, id:1)
+                    viewModel.loadImage(url: item.getMainImageURL(), id:item.getID())
                 }
             CircleProgressView(isLoading: $viewModel.isLoading)
         }

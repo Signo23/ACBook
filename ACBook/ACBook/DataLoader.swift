@@ -11,22 +11,17 @@ import CoreData
 class DataLoader: ObservableObject {
     @Published var model = Modeldata<Villager>(fileName: "villagers.json")
     @Published var images: [Int:UIImage] = [:]
-    @Published var image = UIImage()
+    @Published var imagesHouse: [Int:UIImage] = [:]
     var isLoading = true
     var lastID: Int {
         UserDefaults.standard.integer(forKey: "lastID")
     }
-    var places: [Villager] {
+    private var villagers: [Villager] {
         model.list
     }
     
     let notFoundImage = UIImage(systemName: "multiply.circle")
 
-    
-    /*func loadImage(imageName: String) {
-        image = UIImage(named: imageName)!
-        isLoading = false
-    }*/
     
     func loadImage(url:URL, id: Int){
         DispatchQueue.global(qos: .background).async {
@@ -40,17 +35,36 @@ class DataLoader: ObservableObject {
         }
     }
     
-    func loadImage(url: URL) {
+    func loadImageHouse(url:URL, id: Int){
         DispatchQueue.global(qos: .background).async {
             let data = try? Data(contentsOf: url)
             DispatchQueue.main.async {
                 if let imageData = data {
-                    self.image = UIImage(data: imageData)!
+                    self.imagesHouse[id] = UIImage(data: imageData)!
                     self.isLoading = false
                 }
             }
         }
     }
+    
+    func loadListOfEntity(type: GameEntity)-> [Catalogable] {
+        switch(type){
+        case.villagers:
+            return villagers
+        case .insects:
+            return villagers
+        case .fishes:
+            return villagers
+        case .sea_creatures:
+            return villagers
+        case .fossils:
+            return villagers
+        case .arts:
+            return villagers
+        }
+    }
+    
+    
     
     /*func addItem(placeName: String, placeDesciption: String, image: String, city: String, latitude: String, longitude: String, viewContext: NSManagedObjectContext) {
         withAnimation{

@@ -13,7 +13,7 @@ struct ACBookApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NPCView(viewModel: DataLoader())
+            HomeView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
