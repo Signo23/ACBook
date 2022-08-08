@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CatalogueView: View {
+struct CatalogView: View {
     var viewModel: DataLoader = DataLoader()
 
     var body: some View {

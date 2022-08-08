@@ -25,10 +25,10 @@ struct CollectionableMenuView: View {
         }
         
         Section(){
-            NavigationLink(destination: getDestination(.villagers)){
+            NavigationLink(destination: getDestination(.fossils)){
                 Label("Fossils", systemImage: "fossil.shell.fill")
             }
-            NavigationLink(destination: getDestination(.villagers)){
+            NavigationLink(destination: getDestination(.arts)){
                 Label("Arts", systemImage: "photo.artframe")
             }
         }

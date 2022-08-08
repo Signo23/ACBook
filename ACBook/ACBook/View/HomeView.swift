@@ -15,7 +15,7 @@ struct HomeView: View {
                     Label("Diary", systemImage: "book")
                 }
             
-            CatalogueView()
+            CatalogView()
                 .tabItem{
                     Label("Catalog", systemImage: "leaf")
                 }

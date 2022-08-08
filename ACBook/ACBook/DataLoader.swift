@@ -11,6 +11,8 @@ import CoreData
 class DataLoader: ObservableObject {
     @Published var model = Modeldata<Villager>(fileName: "villagers.json")
     @Published var modelCreatures = Modeldata<Creature>(fileName: "creatures.json")
+    @Published var modelArt = Modeldata<Art>(fileName: "arts.json")
+    @Published var modelFossils = Modeldata<Fossils>(fileName: "fossils.json")
     @Published var images: [Int:UIImage] = [:]
     @Published var imagesHouse: [Int:UIImage] = [:]
     var isLoading = true
@@ -65,9 +67,9 @@ class DataLoader: ObservableObject {
                 creature.getType() == GameEntity.sea_creatures
             }
         case .fossils:
-            return villagers
+            return modelFossils.list
         case .arts:
-            return villagers
+            return modelArt.list
         }
     }
     
