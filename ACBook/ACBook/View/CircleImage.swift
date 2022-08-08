@@ -15,7 +15,7 @@ struct CircleImage : View {
     
     var body: some View {
         ZStack {
-            Image(uiImage: viewModel.images[item.getID()] ?? viewModel.notFoundImage!)
+            Image(uiImage: viewModel.images[item.getID()] ?? viewModel.notFoundImage)
                 .resizable()
                 .frame(width: 150, height: 150, alignment: .center)
                 .clipShape(Circle())

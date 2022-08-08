@@ -14,7 +14,7 @@ struct VillagerRowView: View {
     
     var body: some View {
         HStack{
-            Image(uiImage: viewModel.images[item.getID()] ?? viewModel.notFoundImage!)
+            Image(uiImage: viewModel.images[item.getID()] ?? viewModel.notFoundImage)
                 .resizable()
                 .frame(width: 50, height: 50, alignment: .leading)
                 .onAppear(){

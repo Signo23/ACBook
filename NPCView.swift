@@ -57,7 +57,7 @@ struct NPCView: View{
                 }
                 
                 Section(header: Text("House")) {
-                    Image(uiImage: viewModel.imagesHouse[villager.id] ?? viewModel.notFoundImage!)
+                    Image(uiImage: viewModel.imagesHouse[villager.id] ?? viewModel.notFoundImage)
                         .resizable()
                         .frame(width: 150, height: 150, alignment: .center)
                         .onAppear {

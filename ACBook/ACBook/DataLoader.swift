@@ -20,7 +20,7 @@ class DataLoader: ObservableObject {
         model.list
     }
     
-    let notFoundImage = UIImage(systemName: "multiply.circle")
+    let notFoundImage = UIImage(named: "std")!
 
     
     func loadImage(url:URL, id: Int){

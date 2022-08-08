@@ -25,7 +25,7 @@ struct CatalogueView: View {
                 
                 CollectionableMenuView()
                 
-            }.navigationTitle("Catalogue")
+            }.navigationTitle("Catalog")
             .listStyle(InsetGroupedListStyle())
         }
     }
