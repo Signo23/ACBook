@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CollectionableMenuView: View {
-    
+    var viewModel: DataLoader
     @State var all: Bool = true
     
     var body: some View {
@@ -35,12 +35,6 @@ struct CollectionableMenuView: View {
     }
     
     func getDestination(_ type: GameEntity) -> AnyView {
-        return all ? AnyView(VillagerListView(viewModel: DataLoader(), type: type)) : AnyView(EmptyView())
-    }
-}
-
-struct CollectionableMenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        CollectionableMenuView()
+        return all ? AnyView(VillagerListView(viewModel: self.viewModel, type: type)) : AnyView(EmptyView())
     }
 }

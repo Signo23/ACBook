@@ -8,31 +8,28 @@
 import SwiftUI
 
 struct CatalogueView: View {
+    var viewModel: DataLoader = DataLoader()
+
     var body: some View {
         NavigationView{
             List(){
                 Section(header: Text("")){
-                    NavigationLink(destination: MuseumView()){
+                    NavigationLink(destination: MuseumView(viewModel: viewModel)){
                         Label("Museum", systemImage: "building.columns.fill")
 
                     }
                 }
                 Section(){
-                    NavigationLink(destination: VillagerListView(viewModel: DataLoader(), type: .villagers)){
+                    NavigationLink(destination: VillagerListView(viewModel: viewModel, type: .villagers)){
                         Label("Villagers", systemImage: "hare.fill")
                     }
                 }
                 
-                CollectionableMenuView()
+                CollectionableMenuView(viewModel: viewModel)
                 
             }.navigationTitle("Catalog")
             .listStyle(InsetGroupedListStyle())
+            .navigationViewStyle(StackNavigationViewStyle())
         }
-    }
-}
-
-struct CatalogueView_Previews: PreviewProvider {
-    static var previews: some View {
-        CatalogueView()
     }
 }

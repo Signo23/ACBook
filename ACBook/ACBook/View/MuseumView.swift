@@ -8,17 +8,12 @@
 import SwiftUI
 
 struct MuseumView: View {
+    @ObservedObject var viewModel: DataLoader
     var body: some View {
         List(){
-            CollectionableMenuView(all: false)
+            CollectionableMenuView(viewModel:viewModel, all: false)
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("Museum")
-    }
-}
-
-struct MuseumView_Previews: PreviewProvider {
-    static var previews: some View {
-        MuseumView()
     }
 }

@@ -19,7 +19,6 @@ struct Villager: Catalogable {
     var houseImage: String
     var style: String
     var houseURL: URL {
-        print(houseImage)
         return URL(string: houseImage)!
     }
 

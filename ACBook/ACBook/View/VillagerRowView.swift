@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VillagerRowView: View {
-    @ObservedObject var viewModel = DataLoader()
+    @ObservedObject var viewModel: DataLoader
     
     var item: Catalogable
     
