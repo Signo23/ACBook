@@ -1,0 +1,432 @@
+[
+  {
+    "id": 0,
+    "artist": "Leonardo da Vinci, circa 1487, Pen and ink on paper",
+    "name": "academic painting",
+    "realName": "Vitruvian Man",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtVitruvianMan.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtVitruvianManFake.png"
+  },
+  {
+    "id": 1,
+    "artist": "Rembrandt van Rijn, 1642, Oil on canvas",
+    "name": "amazing painting",
+    "realName": "The Night Watch",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtNightWatch.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtNightWatchFake.png"
+  },
+  {
+    "id": 2,
+    "artist": "Artist Unknown, 1000-400 BCE, Fired pottery",
+    "name": "ancient statue",
+    "realName": "Jōmon Period \"Dogū\" Figurine Shakōki-dogū",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureDoguu.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureDoguuFake.png"
+  },
+  {
+    "id": 3,
+    "artist": "Thomas Gainsborough, 1770, Oil on canvas",
+    "name": "basic painting",
+    "realName": "The Blue Boy",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtBlueBoy.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtBlueBoyFake.png"
+  },
+  {
+    "id": 4,
+    "artist": "Artist Unknown, circa 130 BCE, Marble",
+    "name": "beautiful statue",
+    "realName": "Venus de Milo",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureMilo.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureMiloFake.png"
+  },
+  {
+    "id": 5,
+    "artist": "Georges Seurat, circa 1885, Oil on canvas",
+    "name": "calm painting",
+    "realName": "A Sunday Afternoon on the Island of La Grande Jatte",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtSundayOn.png",
+    "imageFake": ""
+  },
+  {
+    "id": 6,
+    "artist": "Jean-François Millet, 1857, Oil on canvas",
+    "name": "common painting",
+    "realName": "The Gleaners",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtGleaners.png",
+    "imageFake": ""
+  },
+  {
+    "id": 7,
+    "artist": "Itō Jakuchū, 18th century, Dyed silk",
+    "name": "detailed painting",
+    "realName": "Ajisai Sōkeizu",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtAjisaisoukeizu.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtAjisaisoukeizuFake.png"
+  },
+  {
+    "id": 8,
+    "artist": "Katsushika Hokusai, circa 1831, Woodblock print",
+    "name": "dynamic painting",
+    "realName": "Thirty-Six Views of Mount Fuji The Great Wave off Kanagawa",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtKanagawaOki.png",
+    "imageFake": ""
+  },
+  {
+    "id": 9,
+    "artist": "Auguste Rodin, 1902, Bronze",
+    "name": "familiar statue",
+    "realName": "The Thinker",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureThinker.png",
+    "imageFake": ""
+  },
+  {
+    "id": 10,
+    "artist": "Leonardo da Vinci, circa 1503, Oil on poplar",
+    "name": "famous painting",
+    "realName": "Mona Lisa",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtMonaLisa.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtMonaLisaFake.png"
+  },
+  {
+    "id": 11,
+    "artist": "Vincent van Gogh, circa 1888, Oil on canvas",
+    "name": "flowery painting",
+    "realName": "Sunflowers",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtSunflower.png",
+    "imageFake": ""
+  },
+  {
+    "id": 12,
+    "artist": "Michelangelo, circa 1504, Marble",
+    "name": "gallant statue",
+    "realName": "David",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureDavid.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureDavidFake.png"
+  },
+  {
+    "id": 13,
+    "artist": "Joseph Mallord William Turner, 1839, Oil on canvas",
+    "name": "glowing painting",
+    "realName": "The Fighting Temeraire",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtFightingTemeraire.png",
+    "imageFake": ""
+  },
+  {
+    "id": 14,
+    "artist": "Hishikawa Moronobu, 17th century, Color on silk",
+    "name": "graceful painting",
+    "realName": "Beauty Looking Back",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtMikaeri.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtMikaeriFake.png"
+  },
+  {
+    "id": 15,
+    "artist": "Thomas Ridgeway Gould, circa 1883, Bronze",
+    "name": "great statue",
+    "realName": "King Kamehameha I",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureKamehameha.png",
+    "imageFake": ""
+  },
+  {
+    "id": 16,
+    "artist": "Artist Unknown, 196 BCE, Granodiorite",
+    "name": "informative statue",
+    "realName": "Rosetta Stone",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureRosettaStone.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureRosettaStoneFake.png"
+  },
+  {
+    "id": 17,
+    "artist": "Giuseppe Arcimboldo, circa 1563, Oil on canvas",
+    "name": "jolly painting",
+    "realName": "Summer",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtSummer.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtSummerFake.png"
+  },
+  {
+    "id": 18,
+    "artist": "Jean-François Millet, circa 1850, Oil on canvas",
+    "name": "moody painting",
+    "realName": "The Sower",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtSlower.png",
+    "imageFake": ""
+  },
+  {
+    "id": 19,
+    "artist": "Artist Unknown, 5th century BCE, Bronze",
+    "name": "motherly statue",
+    "realName": "Capitoline Wolf",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureCapitolini.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureCapitoliniFake.png"
+  },
+  {
+    "id": 20,
+    "artist": "Sandro Botticelli, circa 1485, Tempera on canvas",
+    "name": "moving painting",
+    "realName": "The Birth of Venus",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtBirthVenus.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtBirthVenusFake.png"
+  },
+  {
+    "id": 21,
+    "artist": "Arnold Böcklin, 1883, Oil on wood",
+    "name": "mysterious painting",
+    "realName": "Isle of the Dead",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtIsleOfDead.png",
+    "imageFake": ""
+  },
+  {
+    "id": 22,
+    "artist": "Thutmose, circa 1345 BCE, Limestone",
+    "name": "mystic statue",
+    "realName": "Bust of Nefertiti",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureNefertiti.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureNefertitiFake.png"
+  },
+  {
+    "id": 23,
+    "artist": "Édouard Manet, 1866, Oil on canvas",
+    "name": "nice painting",
+    "realName": "The Fifer",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtFifePlayer.png",
+    "imageFake": ""
+  },
+  {
+    "id": 24,
+    "artist": "Paul Cézanne, circa 1899, Oil on canvas",
+    "name": "perfect painting",
+    "realName": "Apples and Oranges",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtAppleOrange.png",
+    "imageFake": ""
+  },
+  {
+    "id": 25,
+    "artist": "Édouard Manet, circa 1882, Oil on canvas",
+    "name": "proper painting",
+    "realName": "A Bar at the Folies-Bergère",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtBarFB.png",
+    "imageFake": ""
+  },
+  {
+    "id": 26,
+    "artist": "Johannes Vermeer, circa 1658, Oil on canvas",
+    "name": "quaint painting",
+    "realName": "The Milkmaid",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtMilkmaid.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtMilkmaidFake.png"
+  },
+  {
+    "id": 27,
+    "artist": "Artist Unknown, 2nd century CE, Marble",
+    "name": "robust statue",
+    "realName": "Discobolus",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureDiskobolos.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureDiskobolosFake.png"
+  },
+  {
+    "id": 28,
+    "artist": "Artist Unknown, circa 1000 BCE, Basalt, andesite",
+    "name": "rock-head statue",
+    "realName": "Olmec Colossal Head",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureOlmecaHead.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureOlmecaHeadFake.png"
+  },
+  {
+    "id": 29,
+    "artist": "Tōshūsai Sharaku, 1794, Woodblock print",
+    "name": "scary painting",
+    "realName": "Ōtani Oniji the 3rd as Yakko Edobei",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtOotaniOniji.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtOotaniOnijiFake.png"
+  },
+  {
+    "id": 30,
+    "artist": "Pieter Brueghel the Elder, 1565, Oil on wood panel",
+    "name": "scenic painting",
+    "realName": "The Hunters in the Snow",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtHunterSnow.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtHunterSnowFake.png"
+  },
+  {
+    "id": 31,
+    "artist": "Leonardo da Vinci, circa 1490, Oil on wood panel",
+    "name": "serene painting",
+    "realName": "Lady with an Ermine",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtPortraitCecilia.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtPortraitCeciliaFake.png"
+  },
+  {
+    "id": 32,
+    "artist": "John Everett Millais, 1852, Oil on canvas",
+    "name": "sinking painting",
+    "realName": "Ophelia",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtOphelia.png",
+    "imageFake": ""
+  },
+  {
+    "id": 33,
+    "artist": "Diego Velázquez, circa 1656, Oil on canvas",
+    "name": "solemn painting",
+    "realName": "Las Meninas",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtLasMeninas.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtLasMeninasFake.png"
+  },
+  {
+    "id": 34,
+    "artist": "Artist Unknown, 1200 BCE, Bronze",
+    "name": "tremendous statue",
+    "realName": "Houmuwu Ding",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureHoumuwuDing.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureHoumuwuDingFake.png"
+  },
+  {
+    "id": 35,
+    "artist": "Vincent van Gogh, 1889, Oil on canvas",
+    "name": "twinkling painting",
+    "realName": "The Starry Night",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtStarryNight.png",
+    "imageFake": ""
+  },
+  {
+    "id": 36,
+    "artist": "Artist Unknown, circa 190 BCE, Marble",
+    "name": "valiant statue",
+    "realName": "Nike of Samothrace",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureSamothrace.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureSamothraceFake.png"
+  },
+  {
+    "id": 37,
+    "artist": "Francisco de Goya, circa 1805, Oil on canvas",
+    "name": "warm painting",
+    "realName": "The Clothed Maja",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtClothedMaja.png",
+    "imageFake": ""
+  },
+  {
+    "id": 38,
+    "artist": "Artist Unknown, 210 BCE, Earthenware",
+    "name": "warrior statue",
+    "realName": "Terracotta Army",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureHeibayo.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrSculptureHeibayoFake.png"
+  },
+  {
+    "id": 39,
+    "artist": "Tawaraya Sōtatsu, 17th century, Gold leaf and ink on paper",
+    "name": "wild painting left half",
+    "realName": "Folding Screen of Fūjin and Raijin (L)",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtRaijin.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtRaijinFake.png"
+  },
+  {
+    "id": 40,
+    "artist": "Tawaraya Sōtatsu, 17th century, Gold leaf and ink on paper",
+    "name": "wild painting right half",
+    "realName": "Folding Screen of Fūjin and Raijin (R)",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtFuujin.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtFuujinFake.png"
+  },
+  {
+    "id": 41,
+    "artist": "Johannes Vermeer, circa 1665, Oil on canvas",
+    "name": "wistful painting",
+    "realName": "Girl with a Pearl Earring",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtPearlEarring.png",
+    "imageFake": "https://acnhcdn.com/latest/FtrIcon/FtrArtPearlEarringFake.png"
+  },
+  {
+    "id": 42,
+    "artist": "Eugène Delacroix, 1830, Oil on canvas",
+    "name": "worthy painting",
+    "realName": "Liberty Leading the People",
+    "sell": 1245,
+    "price": 4980,
+    "imageReal": "https://acnhcdn.com/latest/FtrIcon/FtrArtLibertyLeading.png",
+    "imageFake": ""
+  }
+]
