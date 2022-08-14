@@ -23,11 +23,17 @@ struct NPCView: View{
                     .offset(y: -50)
                     .padding(.bottom, -50)
                 
-                Text(item.getName())
+                Text(item.getName().capitalized)
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .padding(.horizontal)
-                villagerInfo
-                .listStyle(InsetGroupedListStyle())
+                if(item.getType() == .villagers){
+                    villagerInfo
+                        .listStyle(InsetGroupedListStyle())
+                } else if(item.getType() == .fish || item.getType() == .sea_creatures || item.getType() == .insects){
+                    creatureInfo
+                        .listStyle(InsetGroupedListStyle())
+                }
+
             }
             .toolbar{
                 ToolbarItemGroup(placement: .bottomBar){
@@ -40,7 +46,7 @@ struct NPCView: View{
                 }
             }
         }.frame(width: UIScreen.main.bounds.width, alignment: .leading)
-        .navigationTitle(item.getName())
+        .navigationTitle(item.getName().capitalized)
         .navigationBarTitleDisplayMode(.inline)
     }
 
@@ -48,7 +54,7 @@ struct NPCView: View{
             let villager: Villager = item as! Villager
             return List{
                 
-                Section(header: Text("Villager's information")) {
+                Section(header: Text("Villager's informations")) {
                     HInfo(key: "Gender", value: villager.gender)
                     HInfo(key: "Personality", value: villager.personality)
                     HInfo(key: "Species", value: villager.species)
@@ -67,5 +73,30 @@ struct NPCView: View{
                 }
             }
 
+    }
+    
+    private var creatureInfo: some View{
+        let creature: Creature = item as! Creature
+        return List {
+            Section(header: Text("Informations")) {
+                HInfo(key: "Sell", value: String(creature.sell))
+                if (creature.getType() == .insects){
+                    HInfo(key: "Wheater", value: creature.weather )
+                }
+                HInfo(key: "Nord", value: creature.getActiveMothNorthDescription())
+                HInfo(key: "Sud", value: creature.getActiveMothSouthDescription())
+                HInfo(key: "Active Hours", value: creature.getHoursDescription())
+            }
+            
+            Section() {
+                Image(uiImage: viewModel.imagesCritterpedia[creature.getID()] ?? viewModel.notFoundImage)
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .onAppear {
+                        viewModel.loadImageCritterpedia(url: creature.critterpediaImageURL, id: creature.id)
+                    }.frame(width: UIScreen.main.bounds.width, alignment: .leading)
+                CircleProgressView(isLoading: $viewModel.isLoading)
+            }
+        }
     }
 }

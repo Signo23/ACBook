@@ -12,10 +12,14 @@ struct Creature: Catalogable{
     var name: String
     var sell: Int
     var source: String
-    var wheather: String?
+    var weather: String
     var iconImage: String
     var critterpediaImage: String
     var activeMonths: Emispher
+    
+    var critterpediaImageURL: URL {
+        return URL(string: self.critterpediaImage)!
+    }
     
     func getType() -> GameEntity {
         return GameEntity(rawValue: source.lowercased())!
@@ -31,6 +35,18 @@ struct Creature: Catalogable{
     
     func getMainImageURL() -> URL {
         return URL(string: self.iconImage)!
+    }
+    
+    func getActiveMothNorthDescription() -> String{
+        return "\(Month(rawValue: self.activeMonths.northern[0].month-1)?.info.capitalized ?? "?") - \(Month(rawValue: self.activeMonths.northern.last!.month-1)?.info.capitalized ?? "?")"
+    }
+    
+    func getActiveMothSouthDescription() -> String{
+        return "\(Month(rawValue: self.activeMonths.southern[0].month-1)?.info.capitalized ?? "?") - \(Month(rawValue: self.activeMonths.southern.last!.month-1)?.info.capitalized ?? "?")"
+    }
+    
+    func getHoursDescription() -> String{
+        return "\(self.activeMonths.northern[0].activeHours[0][0]):00 - \(self.activeMonths.northern[0].activeHours[0][1]):00"
     }
     
     

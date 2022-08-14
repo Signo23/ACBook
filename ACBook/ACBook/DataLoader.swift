@@ -15,6 +15,8 @@ class DataLoader: ObservableObject {
     @Published var modelFossils = Modeldata<Fossils>(fileName: "fossils.json")
     @Published var images: [Int:UIImage] = [:]
     @Published var imagesHouse: [Int:UIImage] = [:]
+    @Published var imagesCritterpedia: [Int:UIImage] = [:]
+
     var isLoading = true
     var lastID: Int {
         UserDefaults.standard.integer(forKey: "lastID")
@@ -50,6 +52,18 @@ class DataLoader: ObservableObject {
         }
     }
     
+    func loadImageCritterpedia(url:URL, id: Int){
+        DispatchQueue.global(qos: .background).async {
+            let data = try? Data(contentsOf: url)
+            DispatchQueue.main.async {
+                if let imageData = data {
+                    self.imagesCritterpedia[id] = UIImage(data: imageData)!
+                    self.isLoading = false
+                }
+            }
+        }
+    }
+    
     func loadListOfEntity(type: GameEntity)-> [Catalogable] {
         switch(type){
         case.villagers:
@@ -73,6 +87,19 @@ class DataLoader: ObservableObject {
         }
     }
     
+    func addVillagerToIsland(id: Int, viewContext: NSManagedObjectContext) {
+        withAnimation{
+            let newItem = Resident(context: viewContext)
+            newItem.id = Int64(lastID + 1)
+        }
+        
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
     
     
     /*func addItem(placeName: String, placeDesciption: String, image: String, city: String, latitude: String, longitude: String, viewContext: NSManagedObjectContext) {
