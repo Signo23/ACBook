@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @State var showAddView: Bool = false
     var body: some View {
         NavigationView{
             List(){
@@ -33,10 +34,22 @@ struct CalendarView: View {
                     }
                 }
             }
+            .navigationTitle("Diary")
+            .listStyle(InsetGroupedListStyle())
+            .navigationViewStyle(StackNavigationViewStyle())
+            .toolbar{
+                ToolbarItem{
+                    Button(action: {
+                        showAddView = true
+                    }, label: {
+                        Label("Add Item", systemImage: "plus")
+                    })
+                }
+            }
+            .sheet(isPresented: $showAddView) {
+                EmptyView()
+            }
         }
-        .navigationTitle("Diary")
-        .listStyle(InsetGroupedListStyle())
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
