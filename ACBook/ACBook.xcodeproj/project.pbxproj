@@ -10,6 +10,7 @@
 		DF714FAC28ABD58E0009B4A6 /* fossils.json in Resources */ = {isa = PBXBuildFile; fileRef = DF714FA928ABD58E0009B4A6 /* fossils.json */; };
 		DF714FAD28ABD58E0009B4A6 /* arts.json in Resources */ = {isa = PBXBuildFile; fileRef = DF714FAA28ABD58E0009B4A6 /* arts.json */; };
 		DF714FAE28ABD58E0009B4A6 /* creatures.json in Resources */ = {isa = PBXBuildFile; fileRef = DF714FAB28ABD58E0009B4A6 /* creatures.json */; };
+		DFB1E4C328C24F8C00746D42 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB1E4C228C24F8C00746D42 /* CalendarView.swift */; };
 		ED04000528A19BD1003C9732 /* Fossils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04000428A19BD1003C9732 /* Fossils.swift */; };
 		ED04000728A2B415003C9732 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04000628A2B415003C9732 /* Month.swift */; };
 		ED04FFF728A16306003C9732 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04FFF628A16306003C9732 /* Creature.swift */; };
@@ -44,6 +45,7 @@
 		DF714FA928ABD58E0009B4A6 /* fossils.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fossils.json; path = ../../../fossils.json; sourceTree = "<group>"; };
 		DF714FAA28ABD58E0009B4A6 /* arts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = arts.json; path = ../../../arts.json; sourceTree = "<group>"; };
 		DF714FAB28ABD58E0009B4A6 /* creatures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = creatures.json; path = ../../../creatures.json; sourceTree = "<group>"; };
+		DFB1E4C228C24F8C00746D42 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		ED04000428A19BD1003C9732 /* Fossils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fossils.swift; sourceTree = "<group>"; };
 		ED04000628A2B415003C9732 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		ED04FFF628A16306003C9732 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				EDBD7D60289D6EFE0081F5C9 /* UserView.swift */,
 				EDBD7D64289D7B0C0081F5C9 /* HInfoFieldCode.swift */,
 				EDBD7D66289D7E280081F5C9 /* IconView.swift */,
+				DFB1E4C228C24F8C00746D42 /* CalendarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				EDBD7D5F289D6A9B0081F5C9 /* MuseumView.swift in Sources */,
 				EDD161EF289C280B000C9798 /* HomeView.swift in Sources */,
 				EDDB842F289BA2F3003675B0 /* CatalogableDetailsView.swift in Sources */,
+				DFB1E4C328C24F8C00746D42 /* CalendarView.swift in Sources */,
 				EDDB8435289BC37E003675B0 /* HInfo.swift in Sources */,
 				ED04FFFF28A196B4003C9732 /* Art.swift in Sources */,
 				EDBD7D65289D7B0C0081F5C9 /* HInfoFieldCode.swift in Sources */,
