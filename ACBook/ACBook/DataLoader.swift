@@ -16,6 +16,7 @@ class DataLoader: ObservableObject {
     @Published var images: [Int:UIImage] = [:]
     @Published var imagesHouse: [Int:UIImage] = [:]
     @Published var imagesCritterpedia: [Int:UIImage] = [:]
+    @Published var imagesFakeArt: [Int:UIImage] = [:]
 
     var isLoading = true
     var lastID: Int {
@@ -58,6 +59,18 @@ class DataLoader: ObservableObject {
             DispatchQueue.main.async {
                 if let imageData = data {
                     self.imagesCritterpedia[id] = UIImage(data: imageData)!
+                    self.isLoading = false
+                }
+            }
+        }
+    }
+    
+    func loadImageFakeArt(url:URL, id: Int){
+        DispatchQueue.global(qos: .background).async {
+            let data = try? Data(contentsOf: url)
+            DispatchQueue.main.async {
+                if let imageData = data {
+                    self.imagesFakeArt[id] = UIImage(data: imageData)!
                     self.isLoading = false
                 }
             }

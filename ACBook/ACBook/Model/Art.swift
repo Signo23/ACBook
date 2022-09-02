@@ -15,6 +15,9 @@ struct Art: Catalogable {
     var sell: Int
     var imageReal: String
     var imageFake: String
+    var fakeImageURL: URL {
+        return URL(string: imageFake) ?? getMainImageURL()
+    }
     
     func getType() -> GameEntity {
         return .arts
