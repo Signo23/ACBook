@@ -9,20 +9,13 @@ import SwiftUI
 
 struct IconView: View {
     var body: some View {
-        ZStack {
-            Color.blue
-                .ignoresSafeArea()
-            VStack(spacing: 20){
-                Image(uiImage: UIImage(named: "std")!)
-                    .resizable()
-                    .clipShape(Circle())
-                    .shadow(radius: 3)
-                Text("Villager")
-                    .foregroundColor(.white)
-            }
-            //.background(.secondary) iOS15
-            //.cornerRadius(15)
+        VStack(spacing: 20){
+            Image(uiImage: UIImage(named: "std")!)
+                .resizable()
+                .clipShape(Circle())
+            Text("Villager")
         }
+        .background(.bar)
         .cornerRadius(5)
     }
 }
