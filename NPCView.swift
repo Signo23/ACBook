@@ -11,6 +11,7 @@ struct NPCView: View{
     
     @ObservedObject var viewModel: DataLoader
     @State var disableAdd: Bool = false
+    @State var isInMuseum: Bool = false
     
     var item: Catalogable
     
@@ -37,18 +38,41 @@ struct NPCView: View{
             }
             .toolbar{
                 ToolbarItemGroup(placement: .bottomBar){
-                    Spacer()
-                    Button{
-                        disableAdd = true
+                    if(item.getType() == .villagers){
+                        Spacer()
+                        Button{
+                            disableAdd = !disableAdd
+                        }
+                        label: {disableAdd ? Text("Remove from island").foregroundColor(.red) : Text("Add to island")}
+                    } else {
+                        if(disableAdd) {
+                            Button{
+                                disableAdd = false
+                                isInMuseum = false
+                            }
+                            label: {
+                                Text("Uncollect")
+                                    .foregroundColor(.red)
+                            }
+                            Button{
+                                isInMuseum = !isInMuseum
+                            }
+                            label: {isInMuseum ? Text("Remove from museum").foregroundColor(.red) : Text("Add to museum")}
+                        } else {
+                            Spacer()
+                            Button{
+                                disableAdd = true
+                            }
+                            label: {Text("Collect")}
+                        }
                     }
-                    label: {disableAdd ? Text("Already in your island") : Text("Add to your island")}
-                        .disabled(disableAdd)
                 }
             }
         }.frame(width: UIScreen.main.bounds.width, alignment: .leading)
         .navigationTitle(item.getName().capitalized)
         .navigationBarTitleDisplayMode(.inline)
     }
+    
 
     private var villagerInfo: some View {
             let villager: Villager = item as! Villager
@@ -74,6 +98,7 @@ struct NPCView: View{
             }
 
     }
+
     
     private var creatureInfo: some View{
         let creature: Creature = item as! Creature
