@@ -11,7 +11,7 @@ struct MuseumView: View {
     @ObservedObject var viewModel: DataLoader
     var body: some View {
         List(){
-            CollectionableMenuView(viewModel:viewModel, all: false)
+            CatalogableMenuView(viewModel:viewModel, all: false)
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("Museum")

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VillagerListView: View {
+struct CatalogableListView: View {
     
     @ObservedObject var viewModel: DataLoader
     @State var searchQuery = ""
@@ -17,8 +17,8 @@ struct VillagerListView: View {
     
     var body: some View{
         List(viewModel.loadListOfEntity(type: type), id: \.id){ item in
-            NavigationLink( destination: NPCView(viewModel: viewModel, item: item)){
-                VillagerRowView(viewModel: viewModel, item: item)
+            NavigationLink( destination: CatalogableDetailsView(viewModel: viewModel, item: item)){
+                CatalogableRowView(viewModel: viewModel, item: item)
             }
         }
         .navigationTitle(Text(type.rawValue.capitalized))

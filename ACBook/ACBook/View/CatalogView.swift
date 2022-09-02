@@ -20,12 +20,12 @@ struct CatalogView: View {
                     }
                 }
                 Section(){
-                    NavigationLink(destination: VillagerListView(viewModel: viewModel, type: .villagers)){
+                    NavigationLink(destination: CatalogableListView(viewModel: viewModel, type: .villagers)){
                         Label("Villagers", systemImage: "hare.fill")
                     }
                 }
                 
-                CollectionableMenuView(viewModel: viewModel)
+                CatalogableMenuView(viewModel: viewModel)
                 
             }.navigationTitle("Catalog")
             .listStyle(InsetGroupedListStyle())

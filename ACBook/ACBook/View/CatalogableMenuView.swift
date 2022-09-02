@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CollectionableMenuView: View {
+struct CatalogableMenuView: View {
     var viewModel: DataLoader
     @State var all: Bool = true
     
@@ -35,6 +35,6 @@ struct CollectionableMenuView: View {
     }
     
     func getDestination(_ type: GameEntity) -> AnyView {
-        return all ? AnyView(VillagerListView(viewModel: self.viewModel, type: type)) : AnyView(EmptyView())
+        return all ? AnyView(CatalogableListView(viewModel: self.viewModel, type: type)) : AnyView(EmptyView())
     }
 }

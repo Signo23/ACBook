@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VillagerRowView: View {
+struct CatalogableRowView: View {
     @ObservedObject var viewModel: DataLoader
     
     var item: Catalogable

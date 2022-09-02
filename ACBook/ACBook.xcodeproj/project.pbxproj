@@ -14,15 +14,15 @@
 		ED04000728A2B415003C9732 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04000628A2B415003C9732 /* Month.swift */; };
 		ED04FFF728A16306003C9732 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04FFF628A16306003C9732 /* Creature.swift */; };
 		ED04FFFF28A196B4003C9732 /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04FFFE28A196B4003C9732 /* Art.swift */; };
-		EDBD7D5D289D67F40081F5C9 /* CollectionableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D5C289D67F40081F5C9 /* CollectionableMenuView.swift */; };
+		EDBD7D5D289D67F40081F5C9 /* CatalogableMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D5C289D67F40081F5C9 /* CatalogableMenuView.swift */; };
 		EDBD7D5F289D6A9B0081F5C9 /* MuseumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D5E289D6A9B0081F5C9 /* MuseumView.swift */; };
 		EDBD7D61289D6EFE0081F5C9 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D60289D6EFE0081F5C9 /* UserView.swift */; };
 		EDBD7D65289D7B0C0081F5C9 /* HInfoFieldCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D64289D7B0C0081F5C9 /* HInfoFieldCode.swift */; };
 		EDBD7D67289D7E280081F5C9 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D66289D7E280081F5C9 /* IconView.swift */; };
 		EDBD7D69289E734A0081F5C9 /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D68289E734A0081F5C9 /* GameEntity.swift */; };
 		EDBD7D6B289E77F90081F5C9 /* Catalogable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBD7D6A289E77F90081F5C9 /* Catalogable.swift */; };
-		EDD161E9289C1B6B000C9798 /* VillagerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD161E8289C1B6B000C9798 /* VillagerListView.swift */; };
-		EDD161EB289C1C5C000C9798 /* VillagerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD161EA289C1C5C000C9798 /* VillagerRowView.swift */; };
+		EDD161E9289C1B6B000C9798 /* CatalogableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD161E8289C1B6B000C9798 /* CatalogableListView.swift */; };
+		EDD161EB289C1C5C000C9798 /* CatalogableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD161EA289C1C5C000C9798 /* CatalogableRowView.swift */; };
 		EDD161ED289C2608000C9798 /* villagers.json in Resources */ = {isa = PBXBuildFile; fileRef = EDD161EC289C2608000C9798 /* villagers.json */; };
 		EDD161EF289C280B000C9798 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD161EE289C280B000C9798 /* HomeView.swift */; };
 		EDD161F1289C418D000C9798 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD161F0289C418D000C9798 /* CatalogView.swift */; };
@@ -32,7 +32,7 @@
 		EDDB8421289BA272003675B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDDB8420289BA272003675B0 /* Preview Assets.xcassets */; };
 		EDDB8423289BA272003675B0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8422289BA272003675B0 /* Persistence.swift */; };
 		EDDB8426289BA272003675B0 /* ACBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8424289BA272003675B0 /* ACBook.xcdatamodeld */; };
-		EDDB842F289BA2F3003675B0 /* NPCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB842E289BA2F3003675B0 /* NPCView.swift */; };
+		EDDB842F289BA2F3003675B0 /* CatalogableDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB842E289BA2F3003675B0 /* CatalogableDetailsView.swift */; };
 		EDDB8431289BBDE1003675B0 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8430289BBDE1003675B0 /* CircleImage.swift */; };
 		EDDB8433289BBE23003675B0 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8432289BBE23003675B0 /* DataLoader.swift */; };
 		EDDB8435289BC37E003675B0 /* HInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8434289BC37E003675B0 /* HInfo.swift */; };
@@ -48,15 +48,15 @@
 		ED04000628A2B415003C9732 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		ED04FFF628A16306003C9732 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 		ED04FFFE28A196B4003C9732 /* Art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art.swift; sourceTree = "<group>"; };
-		EDBD7D5C289D67F40081F5C9 /* CollectionableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionableMenuView.swift; sourceTree = "<group>"; };
+		EDBD7D5C289D67F40081F5C9 /* CatalogableMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogableMenuView.swift; sourceTree = "<group>"; };
 		EDBD7D5E289D6A9B0081F5C9 /* MuseumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumView.swift; sourceTree = "<group>"; };
 		EDBD7D60289D6EFE0081F5C9 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		EDBD7D64289D7B0C0081F5C9 /* HInfoFieldCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HInfoFieldCode.swift; sourceTree = "<group>"; };
 		EDBD7D66289D7E280081F5C9 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		EDBD7D68289E734A0081F5C9 /* GameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEntity.swift; sourceTree = "<group>"; };
 		EDBD7D6A289E77F90081F5C9 /* Catalogable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalogable.swift; sourceTree = "<group>"; };
-		EDD161E8289C1B6B000C9798 /* VillagerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagerListView.swift; sourceTree = "<group>"; };
-		EDD161EA289C1C5C000C9798 /* VillagerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagerRowView.swift; sourceTree = "<group>"; };
+		EDD161E8289C1B6B000C9798 /* CatalogableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogableListView.swift; sourceTree = "<group>"; };
+		EDD161EA289C1C5C000C9798 /* CatalogableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogableRowView.swift; sourceTree = "<group>"; };
 		EDD161EC289C2608000C9798 /* villagers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = villagers.json; sourceTree = "<group>"; };
 		EDD161EE289C280B000C9798 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EDD161F0289C418D000C9798 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		EDDB8422289BA272003675B0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EDDB8425289BA272003675B0 /* ACBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ACBook.xcdatamodel; sourceTree = "<group>"; };
 		EDDB8427289BA272003675B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDDB842E289BA2F3003675B0 /* NPCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NPCView.swift; path = ../../../NPCView.swift; sourceTree = "<group>"; };
+		EDDB842E289BA2F3003675B0 /* CatalogableDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CatalogableDetailsView.swift; path = ../../../CatalogableDetailsView.swift; sourceTree = "<group>"; };
 		EDDB8430289BBDE1003675B0 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		EDDB8432289BBE23003675B0 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		EDDB8434289BC37E003675B0 /* HInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HInfo.swift; sourceTree = "<group>"; };
@@ -133,14 +133,14 @@
 		EDDB842D289BA2D7003675B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EDDB842E289BA2F3003675B0 /* NPCView.swift */,
+				EDDB842E289BA2F3003675B0 /* CatalogableDetailsView.swift */,
 				EDDB8430289BBDE1003675B0 /* CircleImage.swift */,
 				EDDB8434289BC37E003675B0 /* HInfo.swift */,
-				EDD161E8289C1B6B000C9798 /* VillagerListView.swift */,
-				EDD161EA289C1C5C000C9798 /* VillagerRowView.swift */,
+				EDD161E8289C1B6B000C9798 /* CatalogableListView.swift */,
+				EDD161EA289C1C5C000C9798 /* CatalogableRowView.swift */,
 				EDD161EE289C280B000C9798 /* HomeView.swift */,
 				EDD161F0289C418D000C9798 /* CatalogView.swift */,
-				EDBD7D5C289D67F40081F5C9 /* CollectionableMenuView.swift */,
+				EDBD7D5C289D67F40081F5C9 /* CatalogableMenuView.swift */,
 				EDBD7D5E289D6A9B0081F5C9 /* MuseumView.swift */,
 				EDBD7D60289D6EFE0081F5C9 /* UserView.swift */,
 				EDBD7D64289D7B0C0081F5C9 /* HInfoFieldCode.swift */,
@@ -252,12 +252,12 @@
 				EDDB8423289BA272003675B0 /* Persistence.swift in Sources */,
 				EDBD7D5F289D6A9B0081F5C9 /* MuseumView.swift in Sources */,
 				EDD161EF289C280B000C9798 /* HomeView.swift in Sources */,
-				EDDB842F289BA2F3003675B0 /* NPCView.swift in Sources */,
+				EDDB842F289BA2F3003675B0 /* CatalogableDetailsView.swift in Sources */,
 				EDDB8435289BC37E003675B0 /* HInfo.swift in Sources */,
 				ED04FFFF28A196B4003C9732 /* Art.swift in Sources */,
 				EDBD7D65289D7B0C0081F5C9 /* HInfoFieldCode.swift in Sources */,
 				EDDB8433289BBE23003675B0 /* DataLoader.swift in Sources */,
-				EDD161EB289C1C5C000C9798 /* VillagerRowView.swift in Sources */,
+				EDD161EB289C1C5C000C9798 /* CatalogableRowView.swift in Sources */,
 				EDDB841C289BA26F003675B0 /* ContentView.swift in Sources */,
 				ED04000528A19BD1003C9732 /* Fossils.swift in Sources */,
 				EDDB8426289BA272003675B0 /* ACBook.xcdatamodeld in Sources */,
@@ -265,11 +265,11 @@
 				EDBD7D67289D7E280081F5C9 /* IconView.swift in Sources */,
 				EDDB841A289BA26F003675B0 /* ACBookApp.swift in Sources */,
 				EDBD7D69289E734A0081F5C9 /* GameEntity.swift in Sources */,
-				EDD161E9289C1B6B000C9798 /* VillagerListView.swift in Sources */,
+				EDD161E9289C1B6B000C9798 /* CatalogableListView.swift in Sources */,
 				EDBD7D6B289E77F90081F5C9 /* Catalogable.swift in Sources */,
 				EDBD7D61289D6EFE0081F5C9 /* UserView.swift in Sources */,
 				EDD161F1289C418D000C9798 /* CatalogView.swift in Sources */,
-				EDBD7D5D289D67F40081F5C9 /* CollectionableMenuView.swift in Sources */,
+				EDBD7D5D289D67F40081F5C9 /* CatalogableMenuView.swift in Sources */,
 				ED04FFF728A16306003C9732 /* Creature.swift in Sources */,
 				EDDB8431289BBDE1003675B0 /* CircleImage.swift in Sources */,
 			);

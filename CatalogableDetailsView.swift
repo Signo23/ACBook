@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NPCView: View{
+struct CatalogableDetailsView: View{
     
     @ObservedObject var viewModel: DataLoader
     @State var disableAdd: Bool = false
