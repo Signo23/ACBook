@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct CalendarView: View {
+    var viewModel: DataLoader
     @State var showAddView: Bool = false
     var body: some View {
         NavigationView{
             List(){
                 Section(header: Text("August")){
-                    NavigationLink(destination: EmptyView()){
+                    NavigationLink(destination: CalenadarDetailsView(isNewDay: false, viewModel: viewModel)){
                         Text("Monday 29 August 2022")
 
                     }
-                    NavigationLink(destination: EmptyView()){
+                    NavigationLink(destination: CalenadarDetailsView(isNewDay: false, viewModel: viewModel)){
                         Text("Monday 22 August 2022")
 
                     }
-                    NavigationLink(destination: EmptyView()){
+                    NavigationLink(destination: CalenadarDetailsView(isNewDay: false, viewModel: viewModel)){
                         Text("Friday 19 August 2022")
 
                     }
@@ -47,14 +48,8 @@ struct CalendarView: View {
                 }
             }
             .sheet(isPresented: $showAddView) {
-                EmptyView()
+                CalenadarDetailsView(isNewDay: true, viewModel: viewModel)
             }
         }
-    }
-}
-
-struct CalendarView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalendarView()
     }
 }
