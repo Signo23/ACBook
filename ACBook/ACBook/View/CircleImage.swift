@@ -17,6 +17,7 @@ struct CircleImage : View {
         ZStack {
             Image(uiImage: viewModel.images[item.getID()] ?? viewModel.notFoundImage)
                 .resizable()
+                .background(.bar)
                 .frame(width: 150, height: 150, alignment: .center)
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.white, lineWidth: 4))
