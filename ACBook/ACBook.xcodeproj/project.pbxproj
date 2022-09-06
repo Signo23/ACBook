@@ -11,6 +11,10 @@
 		DF714FAD28ABD58E0009B4A6 /* arts.json in Resources */ = {isa = PBXBuildFile; fileRef = DF714FAA28ABD58E0009B4A6 /* arts.json */; };
 		DF714FAE28ABD58E0009B4A6 /* creatures.json in Resources */ = {isa = PBXBuildFile; fileRef = DF714FAB28ABD58E0009B4A6 /* creatures.json */; };
 		DFB1E4C328C24F8C00746D42 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB1E4C228C24F8C00746D42 /* CalendarView.swift */; };
+		DFB1E4C528C33C2500746D42 /* CalenadarDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB1E4C428C33C2500746D42 /* CalenadarDetailsView.swift */; };
+		DFB1E4C728C4ADC200746D42 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB1E4C628C4ADC200746D42 /* LocationViewModel.swift */; };
+		DFB1E4C928C4C31400746D42 /* PhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB1E4C828C4C31400746D42 /* PhotoHelper.swift */; };
+		DFB1E4CB28C7730A00746D42 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB1E4CA28C7730A00746D42 /* Chart.swift */; };
 		ED04000528A19BD1003C9732 /* Fossils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04000428A19BD1003C9732 /* Fossils.swift */; };
 		ED04000728A2B415003C9732 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04000628A2B415003C9732 /* Month.swift */; };
 		ED04FFF728A16306003C9732 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04FFF628A16306003C9732 /* Creature.swift */; };
@@ -46,6 +50,10 @@
 		DF714FAA28ABD58E0009B4A6 /* arts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = arts.json; path = ../../../arts.json; sourceTree = "<group>"; };
 		DF714FAB28ABD58E0009B4A6 /* creatures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = creatures.json; path = ../../../creatures.json; sourceTree = "<group>"; };
 		DFB1E4C228C24F8C00746D42 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		DFB1E4C428C33C2500746D42 /* CalenadarDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenadarDetailsView.swift; sourceTree = "<group>"; };
+		DFB1E4C628C4ADC200746D42 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		DFB1E4C828C4C31400746D42 /* PhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHelper.swift; sourceTree = "<group>"; };
+		DFB1E4CA28C7730A00746D42 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		ED04000428A19BD1003C9732 /* Fossils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fossils.swift; sourceTree = "<group>"; };
 		ED04000628A2B415003C9732 /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		ED04FFF628A16306003C9732 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
@@ -120,6 +128,8 @@
 				EDDB841F289BA272003675B0 /* Preview Content */,
 				EDDB8432289BBE23003675B0 /* DataLoader.swift */,
 				EDDB843B289BCD30003675B0 /* ModelData.swift */,
+				DFB1E4C628C4ADC200746D42 /* LocationViewModel.swift */,
+				DFB1E4C828C4C31400746D42 /* PhotoHelper.swift */,
 			);
 			path = ACBook;
 			sourceTree = "<group>";
@@ -148,6 +158,8 @@
 				EDBD7D64289D7B0C0081F5C9 /* HInfoFieldCode.swift */,
 				EDBD7D66289D7E280081F5C9 /* IconView.swift */,
 				DFB1E4C228C24F8C00746D42 /* CalendarView.swift */,
+				DFB1E4C428C33C2500746D42 /* CalenadarDetailsView.swift */,
+				DFB1E4CA28C7730A00746D42 /* Chart.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,12 +266,15 @@
 				EDDB8438289BC9B7003675B0 /* Villager.swift in Sources */,
 				EDDB8423289BA272003675B0 /* Persistence.swift in Sources */,
 				EDBD7D5F289D6A9B0081F5C9 /* MuseumView.swift in Sources */,
+				DFB1E4C928C4C31400746D42 /* PhotoHelper.swift in Sources */,
 				EDD161EF289C280B000C9798 /* HomeView.swift in Sources */,
 				EDDB842F289BA2F3003675B0 /* CatalogableDetailsView.swift in Sources */,
 				DFB1E4C328C24F8C00746D42 /* CalendarView.swift in Sources */,
 				EDDB8435289BC37E003675B0 /* HInfo.swift in Sources */,
+				DFB1E4C528C33C2500746D42 /* CalenadarDetailsView.swift in Sources */,
 				ED04FFFF28A196B4003C9732 /* Art.swift in Sources */,
 				EDBD7D65289D7B0C0081F5C9 /* HInfoFieldCode.swift in Sources */,
+				DFB1E4C728C4ADC200746D42 /* LocationViewModel.swift in Sources */,
 				EDDB8433289BBE23003675B0 /* DataLoader.swift in Sources */,
 				EDD161EB289C1C5C000C9798 /* CatalogableRowView.swift in Sources */,
 				EDDB841C289BA26F003675B0 /* ContentView.swift in Sources */,
@@ -267,6 +282,7 @@
 				EDDB8426289BA272003675B0 /* ACBook.xcdatamodeld in Sources */,
 				EDDB843C289BCD30003675B0 /* ModelData.swift in Sources */,
 				EDBD7D67289D7E280081F5C9 /* IconView.swift in Sources */,
+				DFB1E4CB28C7730A00746D42 /* Chart.swift in Sources */,
 				EDDB841A289BA26F003675B0 /* ACBookApp.swift in Sources */,
 				EDBD7D69289E734A0081F5C9 /* GameEntity.swift in Sources */,
 				EDD161E9289C1B6B000C9798 /* CatalogableListView.swift in Sources */,
