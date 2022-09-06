@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
+    var viewModel: DataLoader = DataLoader()
     var body: some View {
         TabView{
-            CalendarView()
+            CalendarView(viewModel: viewModel)
                 .tabItem {
                     Label("Diary", systemImage: "book")
                 }
             
-            CatalogView()
+            CatalogView(viewModel: viewModel)
                 .tabItem{
                     Label("Catalog", systemImage: "leaf")
                 }
             
-            UserView()
+            UserView(viewModel: viewModel)
                 .tabItem {
                     Label("User", systemImage: "person")
                 }
