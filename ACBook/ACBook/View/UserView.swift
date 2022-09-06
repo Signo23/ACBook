@@ -10,6 +10,7 @@ import SwiftUI
 struct UserView: View {
     @State var userName: String = "Signo"
     @State var islandName: String = "Hoshimori"
+    var viewModel: DataLoader
     
     var body: some View {
         NavigationView(){
@@ -37,27 +38,32 @@ struct UserView: View {
                 
                 Section(header: Text("Island residents")){
                     HStack(){
-                        IconView()
-                        IconView()
-                        IconView()
-                        IconView()
-                        IconView()
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[0] as! Villager, viewModel: viewModel)
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[1] as! Villager, viewModel: viewModel)
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[2] as! Villager, viewModel: viewModel)
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[3] as! Villager, viewModel: viewModel)
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[4] as! Villager, viewModel: viewModel)
                     }
                     HStack(){
-                        IconView()
-                        IconView()
-                        IconView()
-                        IconView()
-                        IconView()
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[5] as! Villager, viewModel: viewModel)
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[6] as! Villager, viewModel: viewModel)
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[7] as! Villager, viewModel: viewModel)
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[8] as! Villager, viewModel: viewModel)
+                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[9] as! Villager, viewModel: viewModel)
                     }
                     
                 }
                 Section(header: Text("Museum's donations")) {
-                        ProgressView("Insects", value: 64, total: 80)
+                    ProgressView("Insects", value: 64, total: 80)
                         ProgressView("Fishes", value: 54, total: 80)
                         ProgressView("Sea creatures", value: 29, total: 40)
                         ProgressView("Fossils", value: 73, total: 73)
                         ProgressView("Arts", value: 12, total: 43)
+                }
+                
+                Section(header: Text("Statistcs")){
+                    HInfo(key: "Aug", value: "20")
+                    Chart()
                 }
             }
             .listStyle(InsetGroupedListStyle())
@@ -66,8 +72,3 @@ struct UserView: View {
     }
 }
 
-struct UserView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserView()
-    }
-}
