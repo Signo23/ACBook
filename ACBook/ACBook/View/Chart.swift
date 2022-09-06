@@ -8,20 +8,7 @@
 import SwiftUI
 
 struct Chart: View {
-    var measurements: [MonthAvr] = [
-        MonthAvr(month: 0, yaer: 2022, avg: 20),
-        MonthAvr(month: 1, yaer: 2022, avg: 10),
-        MonthAvr(month: 2, yaer: 2022, avg: 15),
-        MonthAvr(month: 3, yaer: 2022, avg: 6),
-        MonthAvr(month: 4, yaer: 2022, avg: 2),
-        MonthAvr(month: 5, yaer: 2022, avg: 17),
-        MonthAvr(month: 6, yaer: 2022, avg: 6),
-        MonthAvr(month: 7, yaer: 2022, avg: 7),
-        MonthAvr(month: 8, yaer: 2022, avg: 25),
-        MonthAvr(month: 9, yaer: 2022, avg: 20),
-        MonthAvr(month: 10, yaer: 2022, avg: 20),
-        MonthAvr(month: 11, yaer: 2022, avg: 10)
-    ]
+    var measurements: [MonthAvr]
 
     var body: some View {
         ScrollView(.horizontal){
@@ -37,13 +24,14 @@ struct Chart: View {
                       ForEach(0..<12) { month in
                         VStack {
                           Spacer()
-                            Text("\(self.measurements[month].avg, specifier: "%.1f" )")
+                            Text("\(self.measurements[month].val, specifier: "%.1f" )")
                               .font(.footnote)
                               .rotationEffect(.degrees(-90))
-                              .offset(y: self.measurements[month].avg < 2.4 ? 0 : 35)                          .zIndex(1)
+                              .offset(y: self.measurements[month].val < 2.4 ? 0 : 35)
+                              .zIndex(1)
                           Rectangle()
                                 .fill(.blue)
-                            .frame(width: 20, height: CGFloat(self.measurements[month].avg) * 15.0)
+                            .frame(width: 20, height: CGFloat(self.measurements[month].val) * 15.0)
                             Text("\(self.monthAbbreviationFromInt(month))")
                             .font(.footnote)
                             .frame(height: 20)
@@ -63,12 +51,6 @@ struct Chart: View {
 
 struct MonthAvr{
     var month: Int
-    var yaer: Int
-    var avg: Double
+    var val: Double
 }
 
-struct Chart_Previews: PreviewProvider {
-    static var previews: some View {
-        Chart()
-    }
-}
