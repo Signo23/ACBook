@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CatalogView: View {
-    var viewModel: DataLoader = DataLoader()
+    var viewModel: DataLoader
 
     var body: some View {
         NavigationView{
