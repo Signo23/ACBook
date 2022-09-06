@@ -52,18 +52,26 @@ struct CalenadarDetailsView: View {
                 print("Prova")
             }
             Section(header: Text("Day's information")){
-                Menu("Photo"){
-                    Button("Take a photo"){
+                Menu(){
+                    Button(){
                         helper.openCameraButton(sender: helper)
+                    } label: {
+                        Label("Photo", systemImage: "camera")
                     }
-                    Button("Select a photo"){
+                    Button(){
                         helper.openPhotoLibraryButton(sender: helper)
+                    } label: {
+                        Label("Library", systemImage: "photo")
                     }
+                } label : {
+                    Label("Photo", systemImage: "camera")
                 }
-                Button("Take position"){
+                Button(){
                     locationViewModel.startMySignificantLocationChanges()
                     latitude = String(format: "%1f", locationViewModel.latitude)
                     longitude = String(format: "%1f", locationViewModel.longitude)
+                } label: {
+                    Label("Take position", systemImage: "map")
                 }
             }
         }
