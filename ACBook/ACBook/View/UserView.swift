@@ -35,7 +35,6 @@ struct UserView: View {
                     HInfoFieldCode(key: "Dream code")
                     HInfoFieldCode(key: "Creator ID")
                 }
-                
                 Section(header: Text("Island residents")){
                     HStack(){
                         IconView(villager: viewModel.loadListOfEntity(type: .villagers)[0] as! Villager, viewModel: viewModel)
@@ -53,18 +52,7 @@ struct UserView: View {
                     }
                     
                 }
-                Section(header: Text("Museum's donations")) {
-                    ProgressView("Insects", value: 64, total: 80)
-                        ProgressView("Fishes", value: 54, total: 80)
-                        ProgressView("Sea creatures", value: 29, total: 40)
-                        ProgressView("Fossils", value: 73, total: 73)
-                        ProgressView("Arts", value: 12, total: 43)
-                }
                 
-                Section(header: Text("Statistcs")){
-                    HInfo(key: "Aug", value: "20")
-                    Chart()
-                }
             }
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("User")
