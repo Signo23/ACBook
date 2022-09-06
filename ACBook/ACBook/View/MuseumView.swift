@@ -12,6 +12,9 @@ struct MuseumView: View {
     var body: some View {
         List(){
             CatalogableMenuView(viewModel:viewModel, all: false)
+            NavigationLink(destination: StatisticsView(viewModel: viewModel)){
+                Label("Statistics", systemImage: "plus.forwardslash.minus")
+            }
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("Museum")
