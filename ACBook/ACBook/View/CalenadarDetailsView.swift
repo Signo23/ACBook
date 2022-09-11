@@ -26,7 +26,7 @@ struct CalenadarDetailsView: View {
     @State private var isImagePickerDisplay = false
     
     //Map
-    @State private var position: MKCoordinateRegion?
+    @State private var position: CLLocationCoordinate2D?
     @ObservedObject var locationViewModel = LocationViewModel()
     var body: some View {
         if(isNewDay){
@@ -60,19 +60,10 @@ struct CalenadarDetailsView: View {
             
             Section("Position"){
                 mapButton()
-                TextField("Latitude", text: $latitude)
-                    .keyboardType(.numberPad)
-                    .onChange(of: locationViewModel.latitude) { value in
-                                latitude = String(format: "%1f", value)
-                    }
-                TextField("Longitude", text: $longitude)
-                    .keyboardType(.numberPad)
-                    .onChange(of: locationViewModel.longitude) { value in
-                                longitude = String(format: "%1f", value)
-                    }
                 if position != nil {
-                    MapView(region: position!)
+                    MapView(locationCoordinates: position!)
                         .frame(height: 300)
+                        .cornerRadius(15)
                 }
             }
 
@@ -120,9 +111,8 @@ struct CalenadarDetailsView: View {
                 locationViewModel.startMySignificantLocationChanges()
                 latitude = String(format: "%1f", locationViewModel.latitude)
                 longitude = String(format: "%1f", locationViewModel.longitude)
-                position = MKCoordinateRegion (
-                    center: CLLocationCoordinate2D(latitude: locationViewModel.latitude, longitude: locationViewModel.longitude),
-                    span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+                position = CLLocationCoordinate2D(latitude: locationViewModel.latitude, longitude: locationViewModel.longitude)
+                
                 self.isPositionDisabled = true
             } label: {
                 Label("Take position", systemImage: "map")

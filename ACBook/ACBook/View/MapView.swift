@@ -10,10 +10,18 @@ import MapKit
 
 struct MapView: View {
     
-    @State var region: MKCoordinateRegion
+    var locationCoordinates: CLLocationCoordinate2D
+    @State private var region = MKCoordinateRegion ()
     
     var body: some View {
         Map(coordinateRegion: $region)
-            .cornerRadius(5)
+            .onAppear {
+                setRegion(locationCoordinates)
+            }
+    }
+    
+    func setRegion(_ coordinate: CLLocationCoordinate2D) {
+        region = MKCoordinateRegion(center: coordinate,
+                                    span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     }
 }
