@@ -10,6 +10,7 @@
 		6D70FF1D28CE6513008849CE /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70FF1C28CE6513008849CE /* ImagePickerView.swift */; };
 		6D70FF1F28CE6550008849CE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70FF1E28CE6550008849CE /* Coordinator.swift */; };
 		6D70FF2128CE65EB008849CE /* PhotoDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70FF2028CE65EB008849CE /* PhotoDemoView.swift */; };
+		6D70FF2328CE6C7E008849CE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70FF2228CE6C7E008849CE /* MapView.swift */; };
 		DF714FAC28ABD58E0009B4A6 /* fossils.json in Resources */ = {isa = PBXBuildFile; fileRef = DF714FA928ABD58E0009B4A6 /* fossils.json */; };
 		DF714FAD28ABD58E0009B4A6 /* arts.json in Resources */ = {isa = PBXBuildFile; fileRef = DF714FAA28ABD58E0009B4A6 /* arts.json */; };
 		DF714FAE28ABD58E0009B4A6 /* creatures.json in Resources */ = {isa = PBXBuildFile; fileRef = DF714FAB28ABD58E0009B4A6 /* creatures.json */; };
@@ -52,6 +53,7 @@
 		6D70FF1C28CE6513008849CE /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		6D70FF1E28CE6550008849CE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6D70FF2028CE65EB008849CE /* PhotoDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDemoView.swift; sourceTree = "<group>"; };
+		6D70FF2228CE6C7E008849CE /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DF714FA928ABD58E0009B4A6 /* fossils.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fossils.json; path = ../../../fossils.json; sourceTree = "<group>"; };
 		DF714FAA28ABD58E0009B4A6 /* arts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = arts.json; path = ../../../arts.json; sourceTree = "<group>"; };
 		DF714FAB28ABD58E0009B4A6 /* creatures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = creatures.json; path = ../../../creatures.json; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				DFB1E4C428C33C2500746D42 /* CalenadarDetailsView.swift */,
 				DFB1E4CA28C7730A00746D42 /* Chart.swift */,
 				DFB1E4CC28C7963100746D42 /* StatisticsView.swift */,
+				6D70FF2228CE6C7E008849CE /* MapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				EDDB842F289BA2F3003675B0 /* CatalogableDetailsView.swift in Sources */,
 				DFB1E4CD28C7963100746D42 /* StatisticsView.swift in Sources */,
 				DFB1E4C328C24F8C00746D42 /* CalendarView.swift in Sources */,
+				6D70FF2328CE6C7E008849CE /* MapView.swift in Sources */,
 				EDDB8435289BC37E003675B0 /* HInfo.swift in Sources */,
 				DFB1E4C528C33C2500746D42 /* CalenadarDetailsView.swift in Sources */,
 				ED04FFFF28A196B4003C9732 /* Art.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 import Foundation
+import MapKit
 
 struct CalenadarDetailsView: View {
     var isNewDay: Bool
@@ -24,21 +25,22 @@ struct CalenadarDetailsView: View {
     @State private var selectedImage: UIImage?
     @State private var isImagePickerDisplay = false
     
+    //Map
+    @State private var position: MKCoordinateRegion?
     @ObservedObject var locationViewModel = LocationViewModel()
-
     var body: some View {
         if(isNewDay){
             NavigationView{
-                content
+                content()
                 .navigationTitle("New day")
             }
         } else {
-            content
+            content()
                 .navigationTitle("Day's details")
         }
     }
     
-    private var content: some View {
+    func content() -> some View {
         List(){
             DatePicker(
                     "Date",
@@ -50,13 +52,31 @@ struct CalenadarDetailsView: View {
                 TextEditor(text: $fullText)
                     .focused($focusedFiels)
                     .submitLabel(.done)
-                    .foregroundColor(.black)
                     .padding(.horizontal)
             }
             .onSubmit {
                 print("Prova")
             }
-            Section(header: Text("Day's information")){
+            
+            Section("Position"){
+                mapButton()
+                TextField("Latitude", text: $latitude)
+                    .keyboardType(.numberPad)
+                    .onChange(of: locationViewModel.latitude) { value in
+                                latitude = String(format: "%1f", value)
+                    }
+                TextField("Longitude", text: $longitude)
+                    .keyboardType(.numberPad)
+                    .onChange(of: locationViewModel.longitude) { value in
+                                longitude = String(format: "%1f", value)
+                    }
+                if position != nil {
+                    MapView(region: position!)
+                        .frame(height: 300)
+                }
+            }
+
+            Section("Photo"){
                 Menu(){
                     Button(){
                         self.sourceType = .camera
@@ -73,21 +93,42 @@ struct CalenadarDetailsView: View {
                 } label : {
                     Label("Photo", systemImage: "camera")
                 }
-                Button(){
-                    locationViewModel.startMySignificantLocationChanges()
-                    latitude = String(format: "%1f", locationViewModel.latitude)
-                    longitude = String(format: "%1f", locationViewModel.longitude)
-                    self.isPositionDisabled = true
-                } label: {
-                    Label("Take position", systemImage: "map")
-                }.disabled(isPositionDisabled)
+                if selectedImage != nil {
+                    Image(uiImage: selectedImage!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .clipShape(Circle())
+                        .frame(width: 300, height: 300)
+                }
             }
+
+            
+
+
         }
         .onTapGesture {
             focusedFiels = false;
         }
         .sheet(isPresented: self.$isImagePickerDisplay) {
             ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
+        }
+    }
+    
+    func mapButton() -> some View {
+        Menu(){
+            Button(){
+                locationViewModel.startMySignificantLocationChanges()
+                latitude = String(format: "%1f", locationViewModel.latitude)
+                longitude = String(format: "%1f", locationViewModel.longitude)
+                position = MKCoordinateRegion (
+                    center: CLLocationCoordinate2D(latitude: locationViewModel.latitude, longitude: locationViewModel.longitude),
+                    span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+                self.isPositionDisabled = true
+            } label: {
+                Label("Take position", systemImage: "map")
+            }.disabled(isPositionDisabled)
+        } label: {
+            Label("Take position", systemImage: "map")
         }
     }
 
