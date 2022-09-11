@@ -2,7 +2,7 @@
 //  CalenadarDetailsView.swift
 //  ACBook
 //
-//  Created by Giusy Messina on 03/09/22.
+//  Created by Lorenzo on 03/09/22.
 //
 
 import SwiftUI
@@ -12,12 +12,17 @@ import Foundation
 struct CalenadarDetailsView: View {
     var isNewDay: Bool
     var viewModel: DataLoader
-    var helper: PhotoHelper = PhotoHelper()
     @State var latitude = ""
     @State var longitude = ""
     @State private var fullText = "Today the museum reach his max expansion"
     @State private var date = Date()
+    @State private var isPositionDisabled: Bool = false
     @FocusState private var focusedFiels: Bool
+    
+    //Camera
+    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @State private var selectedImage: UIImage?
+    @State private var isImagePickerDisplay = false
     
     @ObservedObject var locationViewModel = LocationViewModel()
 
@@ -54,12 +59,14 @@ struct CalenadarDetailsView: View {
             Section(header: Text("Day's information")){
                 Menu(){
                     Button(){
-                        helper.openCameraButton(sender: helper)
+                        self.sourceType = .camera
+                        self.isImagePickerDisplay.toggle()
                     } label: {
                         Label("Photo", systemImage: "camera")
                     }
                     Button(){
-                        helper.openPhotoLibraryButton(sender: helper)
+                        self.sourceType = .photoLibrary
+                        self.isImagePickerDisplay.toggle()
                     } label: {
                         Label("Library", systemImage: "photo")
                     }
@@ -70,21 +77,18 @@ struct CalenadarDetailsView: View {
                     locationViewModel.startMySignificantLocationChanges()
                     latitude = String(format: "%1f", locationViewModel.latitude)
                     longitude = String(format: "%1f", locationViewModel.longitude)
+                    self.isPositionDisabled = true
                 } label: {
                     Label("Take position", systemImage: "map")
-                }
+                }.disabled(isPositionDisabled)
             }
         }
         .onTapGesture {
             focusedFiels = false;
         }
+        .sheet(isPresented: self.$isImagePickerDisplay) {
+            ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
+        }
     }
 
-}
-
-
-struct CalenadarDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalenadarDetailsView(isNewDay: true, viewModel: DataLoader())
-    }
 }

@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>App requires to access to your camera to take photos</string>
+	<string>App requires the access to camera to take photos</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App requires GPS to track your position</string>
 	<key>UIApplicationSceneManifest</key>
