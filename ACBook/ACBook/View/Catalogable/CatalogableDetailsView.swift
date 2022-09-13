@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CatalogableDetailsView: View{
-    
+    @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject var viewModel: DataLoader
     @State var disableAdd: Bool = false
     @State var isInMuseum: Bool = false
@@ -48,6 +48,7 @@ struct CatalogableDetailsView: View{
                         Spacer()
                         Button{
                             disableAdd = !disableAdd
+                            viewModel.add(item: item, viewContext: viewContext)
                         }
                         label: {disableAdd ? Text("Remove from island").foregroundColor(.red) : Text("Add to island")}
                     } else {

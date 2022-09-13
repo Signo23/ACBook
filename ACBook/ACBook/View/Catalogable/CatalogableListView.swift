@@ -10,6 +10,7 @@ import SwiftUI
 struct CatalogableListView: View {
     
     @ObservedObject var viewModel: DataLoader
+    @Environment(\.managedObjectContext) private var viewContext
     @State var searchQuery = ""
 
     
@@ -19,6 +20,7 @@ struct CatalogableListView: View {
         List(viewModel.loadListOfEntity(type: type), id: \.id){ item in
             NavigationLink( destination: CatalogableDetailsView(viewModel: viewModel, item: item)){
                 CatalogableRowView(viewModel: viewModel, item: item)
+                    .environment(\.managedObjectContext, viewContext)
             }
         }
         .navigationTitle(Text(type.rawValue.capitalized))
