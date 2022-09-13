@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D3FC88128D11F34007056BD /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3FC88028D11F34007056BD /* Day.swift */; };
 		6D70FF1D28CE6513008849CE /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70FF1C28CE6513008849CE /* ImagePickerView.swift */; };
 		6D70FF1F28CE6550008849CE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70FF1E28CE6550008849CE /* Coordinator.swift */; };
 		6D70FF2128CE65EB008849CE /* PhotoDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D70FF2028CE65EB008849CE /* PhotoDemoView.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D3FC88028D11F34007056BD /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		6D70FF1C28CE6513008849CE /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		6D70FF1E28CE6550008849CE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6D70FF2028CE65EB008849CE /* PhotoDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDemoView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D3FC87F28D11F27007056BD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6D3FC88028D11F34007056BD /* Day.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		6DE1098F28CF99F00069ECEE /* Catalogable */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +197,7 @@
 		EDDB8436289BC9A3003675B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6D3FC87F28D11F27007056BD /* Core */,
 				EDDB8437289BC9B7003675B0 /* Villager.swift */,
 				EDBD7D68289E734A0081F5C9 /* GameEntity.swift */,
 				EDBD7D6A289E77F90081F5C9 /* Catalogable.swift */,
@@ -310,6 +321,7 @@
 				EDDB841A289BA26F003675B0 /* ACBookApp.swift in Sources */,
 				EDBD7D69289E734A0081F5C9 /* GameEntity.swift in Sources */,
 				EDD161E9289C1B6B000C9798 /* CatalogableListView.swift in Sources */,
+				6D3FC88128D11F34007056BD /* Day.swift in Sources */,
 				EDBD7D6B289E77F90081F5C9 /* Catalogable.swift in Sources */,
 				EDBD7D61289D6EFE0081F5C9 /* UserView.swift in Sources */,
 				EDD161F1289C418D000C9798 /* CatalogView.swift in Sources */,
