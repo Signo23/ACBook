@@ -12,6 +12,7 @@ import MapKit
 import CoreData
 
 struct CalenadarDetailsView: View {
+    @Environment(\.dismiss) var dismiss
     @Environment(\.managedObjectContext) private var viewContext
     var isNewDay: Bool
     var viewModel: DataLoader
@@ -121,9 +122,23 @@ struct CalenadarDetailsView: View {
             ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
         }
         .toolbar{
-            ToolbarItemGroup(placement: .bottomBar){
+            ToolbarItemGroup(){
                 Button("Save"){
-                    print("Ciao")
+                    day.notes = fullText
+                    day.date = date
+                    day.long = position?.longitude ?? 0.0
+                    day.lat = position?.latitude ?? 0.0
+                    if(selectedImage != nil){
+                        day.photo = imgToData(image: selectedImage!)
+                    }
+                    dismiss()
+                    do{
+                        try viewContext.save()
+                    }catch {
+                        let nsError = error as NSError
+                        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                    }
+
                 }
             }
         }
@@ -135,7 +150,6 @@ struct CalenadarDetailsView: View {
             Button(){
                 locationViewModel.startMySignificantLocationChanges()
                 position = CLLocationCoordinate2D(latitude: locationViewModel.latitude, longitude: locationViewModel.longitude)
-                
                 self.isPositionDisabled = true
             } label: {
                 Label("Take position", systemImage: "map")

@@ -173,4 +173,14 @@ class DataLoader: ObservableObject {
             }
         }
     }
+    
+    func saveDay(day: Day, viewContext: NSManagedObjectContext){
+        
+        do{
+            try viewContext.save()
+        }catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
+    }
 }

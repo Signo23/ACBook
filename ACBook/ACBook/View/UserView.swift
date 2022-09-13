@@ -110,18 +110,39 @@ struct UserView: View {
                         }
                     }
                     
-                    HInfoFieldCode(key: "Switch code", code: switchCode)
-                        .onSubmit {
-                            isSaveEnable = true
-                        }
-                    HInfoFieldCode(key: "Dream code", code: dreamCode)
-                        .onSubmit {
-                            isSaveEnable = true
-                        }
-                    HInfoFieldCode(key: "Creator ID", code: creatorId)
-                        .onSubmit {
-                            isSaveEnable = true
-                        }
+                    HStack {
+                        Text("Switch code")
+                        Spacer()
+                        TextField("0000 0000 0000", text: $switchCode)
+                            .foregroundColor(.secondary)
+                            .submitLabel(SubmitLabel.done)
+                            .onSubmit {
+                                isSaveEnable = true
+                            }
+                    }
+                    
+                    HStack {
+                        Text("Dream code")
+                        Spacer()
+                        TextField("0000 0000 0000", text: $dreamCode)
+                            .foregroundColor(.secondary)
+                            .submitLabel(SubmitLabel.done)
+                            .onSubmit {
+                                isSaveEnable = true
+                            }
+                    }
+                    
+                    HStack {
+                        Text("Creator ID")
+                        Spacer()
+                        TextField("0000 0000 0000", text: $creatorId)
+                            .foregroundColor(.secondary)
+                            .submitLabel(SubmitLabel.done)
+                            .onSubmit {
+                                isSaveEnable = true
+                            }
+                    }
+
                     Button("Save"){
                         isSaveEnable = !isSaveEnable
                         //self.userName = playerInfo.name!

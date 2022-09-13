@@ -29,12 +29,9 @@ struct CatalogableDetailsView: View{
                 
                 CircleImage(viewModel: viewModel, item: item)
                     .frame(width: UIScreen.main.bounds.width, alignment: .center)
-                    .offset(y: -50)
-                    .padding(.bottom, -50)
+                    //.offset(y: -75)
+                    //.padding(.bottom, -50)
                 
-                Text(item.getName().capitalized)
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    .padding(.horizontal)
                 if(item.getType() == .villagers){
                     villagerInfo
                         .listStyle(InsetGroupedListStyle())
@@ -69,7 +66,7 @@ struct CatalogableDetailsView: View{
             }
         }.frame(width: UIScreen.main.bounds.width, alignment: .leading)
         .navigationTitle(item.getName().capitalized)
-        .navigationBarTitleDisplayMode(.inline)
+        //.navigationBarTitleDisplayMode(.inline)
     }
     
 
@@ -115,10 +112,10 @@ struct CatalogableDetailsView: View{
             Section() {
                 Image(uiImage: viewModel.imagesCritterpedia[creature.getID()] ?? viewModel.notFoundImage)
                     .resizable()
-                    .frame(width: 150, height: 150)
+                    .frame(width: 150, height: 150, alignment: .center)
                     .onAppear {
                         viewModel.loadImageCritterpedia(url: creature.critterpediaImageURL, id: creature.id)
-                    }.frame(width: UIScreen.main.bounds.width, alignment: .leading)
+                    }.frame(width: UIScreen.main.bounds.width, alignment: .center)
                 CircleProgressView(isLoading: $viewModel.isLoading)
             }
         }
@@ -149,10 +146,10 @@ struct CatalogableDetailsView: View{
                 Section(header: Text("Fake")) {
                     Image(uiImage: viewModel.imagesFakeArt[art.getID()] ?? viewModel.notFoundImage)
                         .resizable()
-                        .frame(width: 150, height: 150)
+                        .frame(width: 150, height: 150, alignment: .center)
                         .onAppear {
                             viewModel.loadImageFakeArt(url: art.fakeImageURL, id: art.id)
-                        }.frame(width: UIScreen.main.bounds.width, alignment: .leading)
+                        }.frame(width: UIScreen.main.bounds.width, alignment: .center)
                     CircleProgressView(isLoading: $viewModel.isLoading)
                 }
             }

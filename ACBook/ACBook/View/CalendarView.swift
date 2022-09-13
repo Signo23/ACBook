@@ -17,13 +17,18 @@ struct CalendarView: View {
     var body: some View {
         NavigationView{
             List(){
-                /*if(!days.isEmpty){
-                    ForEach(days, id: \.date){ day in
-                        NavigationLink(destination: CalenadarDetailsView(isNewDay: false, viewModel: viewModel, day: day).environment(\.managedObjectContext, viewContext)){
-                            Text("\((day.date?.formatted(date: .complete, time: .omitted))!)")
+                Section(header: Text("September")){
+                    if(!days.isEmpty){
+                        ForEach(days, id: \.date){ day in
+                            if(day.date != nil){
+                                NavigationLink(destination: CalenadarDetailsView(isNewDay: false, viewModel: viewModel, day: day).environment(\.managedObjectContext, viewContext)){
+                                    Text("\(day.date!.formatted(date: .complete, time: .omitted))".capitalized)
+                                }
+                            }
+
                         }
                     }
-                }*/
+                }
 
                 /*Section(header: Text("August")){
                     NavigationLink(destination: CalenadarDetailsView(isNewDay: false, viewModel: viewModel).environment(\.managedObjectContext, viewContext)){
@@ -39,13 +44,7 @@ struct CalendarView: View {
 
                     }
                 }*/
-                
-                Section(header: Text("June")){
-                    NavigationLink(destination: EmptyView()){
-                        Text("Monday 11 June 2022")
-
-                    }
-                }
+ 
             }
             .navigationTitle("Diary")
             .listStyle(InsetGroupedListStyle())
