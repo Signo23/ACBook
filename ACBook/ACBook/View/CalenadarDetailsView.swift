@@ -81,7 +81,7 @@ struct CalenadarDetailsView: View {
                 if position != nil {
                     MapView(locationCoordinates: position!)
                         .frame(height: 300)
-                        .cornerRadius(15)
+                        .cornerRadius(25)
                 }
             }
 

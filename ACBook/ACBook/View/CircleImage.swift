@@ -23,7 +23,6 @@ struct CircleImage : View {
                 .overlay(Circle().stroke(Color.white, lineWidth: 4))
                 .shadow(radius: 7)
                 .onAppear {
-                    //viewModel.loadImage(url: image)
                     viewModel.loadImage(url: item.getMainImageURL(), id:item.getID())
                 }
             CircleProgressView(isLoading: $viewModel.isLoading)
