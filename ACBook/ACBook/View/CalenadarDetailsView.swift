@@ -9,14 +9,14 @@ import SwiftUI
 import UIKit
 import Foundation
 import MapKit
+import CoreData
 
 struct CalenadarDetailsView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     var isNewDay: Bool
     var viewModel: DataLoader
-    @State var latitude = ""
-    @State var longitude = ""
-    @State private var fullText = "Today the museum reach his max expansion"
-    @State private var date = Date()
+    @State private var fullText: String
+    @State private var date: Date
     @State private var isPositionDisabled: Bool = false
     @FocusState private var focusedFiels: Bool
     
@@ -28,6 +28,23 @@ struct CalenadarDetailsView: View {
     //Map
     @State private var position: CLLocationCoordinate2D?
     @ObservedObject var locationViewModel = LocationViewModel()
+    
+    private var day: Day
+    
+    init(isNewDay: Bool, viewModel: DataLoader, day: Day) {
+        self.day = day
+        self.isNewDay = isNewDay
+        self.viewModel = viewModel
+        _fullText = State(initialValue: day.notes ?? "")
+        _date = State(initialValue: day.date ?? Date())
+        if(day.photo != nil){
+            _selectedImage = State(initialValue: dataToImg(data: day.photo!))
+        }
+        if(day.long != 0.0 && day.lat != 0.0){
+            _position = State(initialValue: CLLocationCoordinate2D(latitude: day.lat, longitude: day.long))
+        }
+    }
+    
     var body: some View {
         if(isNewDay){
             NavigationView{
@@ -103,14 +120,20 @@ struct CalenadarDetailsView: View {
         .sheet(isPresented: self.$isImagePickerDisplay) {
             ImagePickerView(selectedImage: self.$selectedImage, sourceType: self.sourceType)
         }
+        .toolbar{
+            ToolbarItemGroup(placement: .bottomBar){
+                Button("Save"){
+                    print("Ciao")
+                }
+            }
+        }
+
     }
     
     func mapButton() -> some View {
         Menu(){
             Button(){
                 locationViewModel.startMySignificantLocationChanges()
-                latitude = String(format: "%1f", locationViewModel.latitude)
-                longitude = String(format: "%1f", locationViewModel.longitude)
                 position = CLLocationCoordinate2D(latitude: locationViewModel.latitude, longitude: locationViewModel.longitude)
                 
                 self.isPositionDisabled = true
@@ -120,6 +143,14 @@ struct CalenadarDetailsView: View {
         } label: {
             Label("Take position", systemImage: "map")
         }
+    }
+    
+    func imgToData(image: UIImage) -> Data{
+        (image.pngData())!
+    }
+    
+    func dataToImg(data: Data) -> UIImage{
+        UIImage(data: data)!
     }
 
 }

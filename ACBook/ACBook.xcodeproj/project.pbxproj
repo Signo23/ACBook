@@ -116,13 +116,6 @@
 			path = Catalogable;
 			sourceTree = "<group>";
 		};
-		6DE1099028CF9BC30069ECEE /* Core */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		EDDB840D289BA26F003675B0 = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +187,6 @@
 		EDDB8436289BC9A3003675B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6DE1099028CF9BC30069ECEE /* Core */,
 				EDDB8437289BC9B7003675B0 /* Villager.swift */,
 				EDBD7D68289E734A0081F5C9 /* GameEntity.swift */,
 				EDBD7D6A289E77F90081F5C9 /* Catalogable.swift */,

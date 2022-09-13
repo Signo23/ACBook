@@ -120,7 +120,6 @@ class DataLoader: ObservableObject {
             case .villagers:
                 let villager = Resident(context: viewContext)
                 villager.id = Int64(item.getID())
-                print(villager);
             case .fossils:
                 let fossil = FossilsPlayer(context: viewContext)
                 fossil.id = Int64(item.getID())
@@ -150,6 +149,25 @@ class DataLoader: ObservableObject {
             do {
                 try viewContext.save()
             } catch {
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
+    
+    func savePlayerInfo(player: Player, viewContext: NSManagedObjectContext) {
+        withAnimation{
+            let ply: Player = Player(context: viewContext)
+            ply.name = player.name
+            ply.islandName = player.islandName
+            ply.fruit = player.fruit
+            ply.hem = player.hem
+            ply.switchID = player.switchID
+            ply.dream = player.dream
+            ply.creator = player.creator
+            do{
+                try viewContext.save()
+            }catch {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }

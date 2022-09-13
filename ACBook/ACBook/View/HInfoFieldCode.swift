@@ -7,18 +7,19 @@
 
 import SwiftUI
 
+
 struct HInfoFieldCode: View {
-    @State var code: String = ""
     var key: String = ""
+    @State var code: String = ""
     
     var body: some View {
         HStack {
             Text(key)
             Spacer()
-            TextField("0000 0000 0000", value: $code, formatter: NumberFormatter()/*iOS 15 -> .number*/)
+            TextField("0000 0000 0000", text: $code)
                 .foregroundColor(.secondary)
+                .submitLabel(SubmitLabel.done)
             }
-
     }
 }
 
