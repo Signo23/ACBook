@@ -13,28 +13,24 @@ struct CatalogableMenuView: View {
     
     var body: some View {
         Section(){
-            NavigationLink(destination: getDestination(.insects)){
+            NavigationLink(destination: CatalogableListView(viewModel: self.viewModel, type: .insects, museum: !all)){
                 Label("Insects", systemImage: "ant.fill")
             }
-            NavigationLink(destination: getDestination(.fish)){
+            NavigationLink(destination: CatalogableListView(viewModel: self.viewModel, type: .fish, museum: !all)){
                 Label("Fish", systemImage: "fish.fill")
             }
-            NavigationLink(destination: getDestination(.sea_creatures)){
+            NavigationLink(destination: CatalogableListView(viewModel: self.viewModel, type: .sea_creatures, museum: !all)){
                 Label("Sea creatures", systemImage: "tortoise.fill")
             }
         }
         
         Section(){
-            NavigationLink(destination: getDestination(.fossils)){
+            NavigationLink(destination: CatalogableListView(viewModel: self.viewModel, type: .fossils, museum: !all)){
                 Label("Fossils", systemImage: "fossil.shell.fill")
             }
-            NavigationLink(destination: getDestination(.arts)){
+            NavigationLink(destination: CatalogableListView(viewModel: self.viewModel, type: .arts, museum: !all)){
                 Label("Arts", systemImage: "photo.artframe")
             }
         }
-    }
-    
-    func getDestination(_ type: GameEntity) -> AnyView {
-        return all ? AnyView(CatalogableListView(viewModel: self.viewModel, type: type)) : AnyView(EmptyView())
     }
 }

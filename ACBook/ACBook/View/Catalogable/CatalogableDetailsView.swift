@@ -6,14 +6,22 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct CatalogableDetailsView: View{
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject var viewModel: DataLoader
-    @State var disableAdd: Bool = false
-    @State var isInMuseum: Bool = false
+    @State var disableAdd: Bool
     
     var item: Catalogable
+    @FetchRequest(sortDescriptors: [], predicate: nil, animation: .default)
+    var residents: FetchedResults<Resident>
+    @FetchRequest(sortDescriptors: [], predicate: nil, animation: .default)
+    var fossils: FetchedResults<FossilsPlayer>
+    @FetchRequest(sortDescriptors: [], predicate: nil, animation: .default)
+    var arts: FetchedResults<ArtPlayer>
+    @FetchRequest(sortDescriptors: [], predicate: nil, animation: .default)
+    var creatures: FetchedResults<CreaturePlayer>
     
     var body: some View {
         NavigationView{
@@ -44,35 +52,19 @@ struct CatalogableDetailsView: View{
             }
             .toolbar{
                 ToolbarItemGroup(placement: .bottomBar){
-                    if(item.getType() == .villagers){
-                        Spacer()
-                        Button{
-                            disableAdd = !disableAdd
+                    Spacer()
+                    Button{
+                        if(disableAdd){
+                            disableAdd = false
+                            viewModel.deleteItem(item: getItemCore(), viewContext: viewContext)
+                        }
+                        else {
+                            disableAdd = true
                             viewModel.add(item: item, viewContext: viewContext)
                         }
-                        label: {disableAdd ? Text("Remove from island").foregroundColor(.red) : Text("Add to island")}
-                    } else {
-                        if(disableAdd) {
-                            Button{
-                                disableAdd = false
-                                isInMuseum = false
-                            }
-                            label: {
-                                Text("Uncollect")
-                                    .foregroundColor(.red)
-                            }
-                            Button{
-                                isInMuseum = !isInMuseum
-                            }
-                            label: {isInMuseum ? Text("Remove from museum").foregroundColor(.red) : Text("Add to museum")}
-                        } else {
-                            Spacer()
-                            Button{
-                                disableAdd = true
-                            }
-                            label: {Text("Collect")}
-                        }
                     }
+                label: {disableAdd ? (item.getType() == .villagers ? Text("Remove from island").foregroundColor(.red): Text("Uncollect")
+                    .foregroundColor(.red)) : (item.getType() == .villagers ? Text("Add to island"): Text("Collect"))}
                 }
             }
         }.frame(width: UIScreen.main.bounds.width, alignment: .leading)
@@ -165,5 +157,29 @@ struct CatalogableDetailsView: View{
                 }
             }
         }
+    }
+    
+    private func getItemCore() -> NSManagedObject{
+        
+        switch(item.getType()){
+        case .villagers:
+            return residents.filter{ res in
+                res.id == Int64(item.getID())
+            }.first!
+        case .fossils:
+            return fossils.filter{ fos in
+                fos.id == Int64(item.getID())
+            }.first!
+        case .arts:
+            return arts.filter{ art in
+                art.id == Int64(item.getID())
+            }.first!
+        default:
+            return creatures.filter{ cre in
+                cre.id == Int64(item.getID())
+            }.first!
+
+        }
+        
     }
 }

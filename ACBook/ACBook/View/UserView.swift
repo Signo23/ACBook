@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct UserView: View {
     @State var userName: String = "Signo"
     @State var islandName: String = "Hoshimori"
     var viewModel: DataLoader
+    @FetchRequest(sortDescriptors: [], predicate: nil, animation: .default)
+    private var residents: FetchedResults<Resident>
+    
     
     var body: some View {
         NavigationView(){
@@ -37,26 +41,48 @@ struct UserView: View {
                 }
                 Section(header: Text("Island residents")){
                     HStack(){
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[0] as! Villager, viewModel: viewModel)
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[1] as! Villager, viewModel: viewModel)
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[2] as! Villager, viewModel: viewModel)
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[3] as! Villager, viewModel: viewModel)
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[4] as! Villager, viewModel: viewModel)
+                        ForEach(getResidents().prefix(5), id: \.id){ vil in
+                            IconView(villager: vil, viewModel: viewModel)
+                        }
                     }
-                    HStack(){
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[5] as! Villager, viewModel: viewModel)
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[6] as! Villager, viewModel: viewModel)
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[7] as! Villager, viewModel: viewModel)
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[8] as! Villager, viewModel: viewModel)
-                        IconView(villager: viewModel.loadListOfEntity(type: .villagers)[9] as! Villager, viewModel: viewModel)
+                    if(getResidents().count > 5){
+                        HStack{
+                            ForEach(getSecondLine(villagers: getResidents()), id: \.id){ vil in
+                                IconView(villager: vil, viewModel: viewModel)
+                            }
+                        }
                     }
-                    
                 }
                 
             }
             .listStyle(InsetGroupedListStyle())
             .navigationTitle("User")
         }
+    }
+    
+    func getResidents() -> [Villager]{
+        let villagers = viewModel.loadListOfEntity(type: .villagers)
+        var final: [Villager] = []
+        var ids: [Int64] = []
+        for res in residents {
+            ids.append(res.id)
+        }
+        for vil in villagers {
+            if(ids.contains(Int64(vil.getID()))){
+                final.append(vil as! Villager)
+            }
+        }
+        return final
+    }
+    
+    private func getSecondLine(villagers: [Villager]) -> [Villager]{
+        var second: [Villager] = villagers
+        second.removeFirst()
+        second.removeFirst()
+        second.removeFirst()
+        second.removeFirst()
+        second.removeFirst()
+        return second
     }
 }
 

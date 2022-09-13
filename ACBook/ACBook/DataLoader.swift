@@ -144,14 +144,9 @@ class DataLoader: ObservableObject {
         }
     }
     
-    /*
-    
-    func deleteItems(places: [PlaceEntity], viewContext: NSManagedObjectContext) {
+    func deleteItem(item: NSManagedObject, viewContext: NSManagedObjectContext) {
         withAnimation{
-            for place in places {
-                viewContext.delete(place)
-            }
-            
+            viewContext.delete(item)
             do {
                 try viewContext.save()
             } catch {
@@ -159,5 +154,5 @@ class DataLoader: ObservableObject {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
-    }*/
+    }
 }
