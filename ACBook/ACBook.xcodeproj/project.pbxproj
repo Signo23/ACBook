@@ -86,7 +86,7 @@
 		EDDB8422289BA272003675B0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EDDB8425289BA272003675B0 /* ACBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ACBook.xcdatamodel; sourceTree = "<group>"; };
 		EDDB8427289BA272003675B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDDB842E289BA2F3003675B0 /* CatalogableDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CatalogableDetailsView.swift; path = ../../../CatalogableDetailsView.swift; sourceTree = "<group>"; };
+		EDDB842E289BA2F3003675B0 /* CatalogableDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogableDetailsView.swift; sourceTree = "<group>"; };
 		EDDB8430289BBDE1003675B0 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		EDDB8432289BBE23003675B0 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		EDDB8434289BC37E003675B0 /* HInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HInfo.swift; sourceTree = "<group>"; };
@@ -105,6 +105,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6DE1098F28CF99F00069ECEE /* Catalogable */ = {
+			isa = PBXGroup;
+			children = (
+				EDDB842E289BA2F3003675B0 /* CatalogableDetailsView.swift */,
+				EDD161E8289C1B6B000C9798 /* CatalogableListView.swift */,
+				EDD161EA289C1C5C000C9798 /* CatalogableRowView.swift */,
+				EDBD7D5C289D67F40081F5C9 /* CatalogableMenuView.swift */,
+			);
+			path = Catalogable;
+			sourceTree = "<group>";
+		};
+		6DE1099028CF9BC30069ECEE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		EDDB840D289BA26F003675B0 = {
 			isa = PBXGroup;
 			children = (
@@ -124,22 +142,21 @@
 		EDDB8418289BA26F003675B0 /* ACBook */ = {
 			isa = PBXGroup;
 			children = (
-				6D70FF2028CE65EB008849CE /* PhotoDemoView.swift */,
-				EDDB843D289BCE73003675B0 /* Resources */,
-				EDDB8436289BC9A3003675B0 /* Model */,
-				EDDB842D289BA2D7003675B0 /* View */,
+				EDDB8427289BA272003675B0 /* Info.plist */,
 				EDDB8419289BA26F003675B0 /* ACBookApp.swift */,
 				EDDB841B289BA26F003675B0 /* ContentView.swift */,
-				EDDB841D289BA272003675B0 /* Assets.xcassets */,
-				EDDB8422289BA272003675B0 /* Persistence.swift */,
-				EDDB8427289BA272003675B0 /* Info.plist */,
-				EDDB8424289BA272003675B0 /* ACBook.xcdatamodeld */,
-				EDDB841F289BA272003675B0 /* Preview Content */,
-				EDDB8432289BBE23003675B0 /* DataLoader.swift */,
-				EDDB843B289BCD30003675B0 /* ModelData.swift */,
-				DFB1E4C628C4ADC200746D42 /* LocationViewModel.swift */,
-				6D70FF1C28CE6513008849CE /* ImagePickerView.swift */,
 				6D70FF1E28CE6550008849CE /* Coordinator.swift */,
+				EDDB8432289BBE23003675B0 /* DataLoader.swift */,
+				DFB1E4C628C4ADC200746D42 /* LocationViewModel.swift */,
+				EDDB843B289BCD30003675B0 /* ModelData.swift */,
+				EDDB8422289BA272003675B0 /* Persistence.swift */,
+				6D70FF2028CE65EB008849CE /* PhotoDemoView.swift */,
+				EDDB841D289BA272003675B0 /* Assets.xcassets */,
+				EDDB8424289BA272003675B0 /* ACBook.xcdatamodeld */,
+				EDDB8436289BC9A3003675B0 /* Model */,
+				EDDB841F289BA272003675B0 /* Preview Content */,
+				EDDB843D289BCE73003675B0 /* Resources */,
+				EDDB842D289BA2D7003675B0 /* View */,
 			);
 			path = ACBook;
 			sourceTree = "<group>";
@@ -155,14 +172,12 @@
 		EDDB842D289BA2D7003675B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EDDB842E289BA2F3003675B0 /* CatalogableDetailsView.swift */,
+				6DE1098F28CF99F00069ECEE /* Catalogable */,
 				EDDB8430289BBDE1003675B0 /* CircleImage.swift */,
+				6D70FF1C28CE6513008849CE /* ImagePickerView.swift */,
 				EDDB8434289BC37E003675B0 /* HInfo.swift */,
-				EDD161E8289C1B6B000C9798 /* CatalogableListView.swift */,
-				EDD161EA289C1C5C000C9798 /* CatalogableRowView.swift */,
 				EDD161EE289C280B000C9798 /* HomeView.swift */,
 				EDD161F0289C418D000C9798 /* CatalogView.swift */,
-				EDBD7D5C289D67F40081F5C9 /* CatalogableMenuView.swift */,
 				EDBD7D5E289D6A9B0081F5C9 /* MuseumView.swift */,
 				EDBD7D60289D6EFE0081F5C9 /* UserView.swift */,
 				EDBD7D64289D7B0C0081F5C9 /* HInfoFieldCode.swift */,
@@ -179,6 +194,7 @@
 		EDDB8436289BC9A3003675B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6DE1099028CF9BC30069ECEE /* Core */,
 				EDDB8437289BC9B7003675B0 /* Villager.swift */,
 				EDBD7D68289E734A0081F5C9 /* GameEntity.swift */,
 				EDBD7D6A289E77F90081F5C9 /* Catalogable.swift */,

@@ -114,16 +114,26 @@ class DataLoader: ObservableObject {
         }
     }
     
-    
-    /*func addItem(placeName: String, placeDesciption: String, image: String, city: String, latitude: String, longitude: String, viewContext: NSManagedObjectContext) {
+    func add(item: Catalogable, viewContext: NSManagedObjectContext) {
         withAnimation{
-            let newItem = PlaceEntity(context: viewContext)
-            newItem.id = Int64(lastID + 1)
-            newItem.name = placeName
-            newItem.placeDescription = placeDesciption
-            newItem.city = city
-            newItem.latitude = Double(latitude) ?? 0.0
-            newItem.longitude = Double(longitude) ?? 0.0
+            switch(item.getType()){
+            case .villagers:
+                let villager = Resident(context: viewContext)
+                villager.id = Int64(item.getID())
+                print(villager);
+            case .fossils:
+                let fossil = FossilsPlayer(context: viewContext)
+                fossil.id = Int64(item.getID())
+                fossil.date = Date()
+            case .arts:
+                let art = ArtPlayer(context: viewContext)
+                art.id = Int64(item.getID())
+                art.date = Date()
+            default:
+                let creature = CreaturePlayer(context: viewContext)
+                creature.id = Int64(item.getID())
+                creature.date = Date()
+            }
         }
         
         do {
@@ -133,6 +143,8 @@ class DataLoader: ObservableObject {
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
+    
+    /*
     
     func deleteItems(places: [PlaceEntity], viewContext: NSManagedObjectContext) {
         withAnimation{

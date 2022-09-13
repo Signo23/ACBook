@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CatalogView: View {
     var viewModel: DataLoader
+    @Environment(\.managedObjectContext) private var viewContext
 
     var body: some View {
         NavigationView{
@@ -23,6 +24,7 @@ struct CatalogView: View {
                     NavigationLink(destination: CatalogableListView(viewModel: viewModel, type: .villagers)){
                         Label("Villagers", systemImage: "hare.fill")
                     }
+                    .environment(\.managedObjectContext, viewContext)
                 }
                 
                 CatalogableMenuView(viewModel: viewModel)

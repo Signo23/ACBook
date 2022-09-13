@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     var viewModel: DataLoader = DataLoader()
     var body: some View {
         TabView{
@@ -17,6 +18,7 @@ struct HomeView: View {
                 }
             
             CatalogView(viewModel: viewModel)
+                .environment(\.managedObjectContext, viewContext)
                 .tabItem{
                     Label("Catalog", systemImage: "leaf")
                 }
